@@ -31,9 +31,9 @@ include "inc/koneksi.php";
 	<!-- Ionicons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 	<!-- DataTables -->
-	<link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
+	<!-- <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css"> -->
 	<!-- Select2 -->
-	<link rel="stylesheet" href="plugins/select2/select2.min.css">
+	<!-- <link rel="stylesheet" href="plugins/select2/select2.min.css"> -->
 	<!-- Theme style -->
 	<link rel="stylesheet" href="dist/css/AdminLTE.min.css">
 	<!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -418,17 +418,17 @@ include "inc/koneksi.php";
 		<!-- ./wrapper -->
 
 		<!-- jQuery 2.2.3 -->
-		<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+		<!-- <script src="plugins/jQuery/jquery-2.2.3.min.js"></script> -->
 			 
 		<!--Bootstrap 3.3.6 -->
 			
 		<script src = "bootstrap/js/bootstrap.min.js"></script>
 		
 
-		<script src="plugins/select2/select2.full.min.js"></script>
+		<!-- <script src="plugins/select2/select2.full.min.js"></script> -->
 		<!-- DataTables -->
-		<script src="plugins/datatables/jquery.dataTables.min.js"></script>
-		<script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+		<!-- <script src="plugins/datatables/jquery.dataTables.min.js"></script> -->
+		<!-- <script src="plugins/datatables/dataTables.bootstrap.min.js"></script> -->
 
 		<!-- AdminLTE App -->
 		<script src="dist/js/app.min.js"></script>

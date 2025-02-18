@@ -133,13 +133,13 @@
 								</td>
 								<?php }if ($table == 'siswa'){ ?>
 								<td>
-									<select name="<?= $table?>_jekel" id="<?= $table?>_jekel" required>
+									<select name="<?= $table?>_gender" id="<?= $table?>_jekel" required>
 										<option value="Laki-laki">Laki-laki</option>
 										<option value="Perempuan">Perempuan</option>
 									</select>
 								</td>
 								<td>
-									<input type="text" name="<?= $table?>kelas" id="<?= $table?>kelas" placeholder="Kelas" max="35" required>
+									<input type="text" name="<?= $table?>_kelas" id="<?= $table?>kelas" placeholder="Kelas" max="35" required>
 								</td>
 								<td>
 									<input type="email" name="<?= $table?>_email" id="<?= $table?>_email" placeholder="Email" max="35" required>
