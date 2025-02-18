@@ -101,7 +101,9 @@
 
         if ($table == 'siswa'){
             $query = "SELECT id_siswa FROM tb_siswa ORDER BY id_siswa DESC LIMIT 1";
-            $id = $koneksi->query($query);
+            $result = $koneksi->query($query);
+            $data = $result->fetch_assoc();
+            $id = $data['id_siswa'];
 
             $sql = "INSERT INTO tb_nilai VALUE (NULL, $id, NULL, 0, NULL, 0, 0)";
             
