@@ -97,41 +97,56 @@ include "inc/koneksi.php";
 			$username=mysqli_real_escape_string($koneksi,$_POST['username']);
 			$password=mysqli_real_escape_string($koneksi,md5($_POST['password']));
 
+			$tables = array(
+				"pengguna" => "tb_pengguna",
+				"siswa" => "tb_siswa"
+			);
+			$table_found = "";
+			foreach ($tables as $user => $table_name) {
+				$sql_login = "SELECT * FROM $table_name WHERE BINARY username='$username' AND password= '$password'";
+				$query_login = mysqli_query($koneksi, $sql_login);
+				$data_login = mysqli_num_rows($query_login) == 1 ? mysqli_fetch_array($query_login,MYSQLI_BOTH) : NULL;
+				if ($data_login != NULL){ $table_found = $user; break; }
+			}
+			
+            if ($data_login != NULL){
+				session_start();
+				$_SESSION["ses_id"] = $data_login["id_".$table_found]; $user_id = $data_login["id_".$table_found];
+				$_SESSION["ses_nama"] = $data_login["nama_".$table_found]; $user_name = $data_login["nama_".$table_found];
+				$_SESSION["ses_username"] = $data_login["username"];
+				$_SESSION["ses_password"] = $data_login["password"];
+				$_SESSION["ses_level"] = $data_login["level"];
 
-			$sql_login = "SELECT * FROM tb_pengguna WHERE BINARY username='$username' AND password= '$password'";
-			$query_login = mysqli_query($koneksi, $sql_login);
-			$data_login = mysqli_fetch_array($query_login,MYSQLI_BOTH);
-			$jumlah_login = mysqli_num_rows($query_login);
-        
+				// Add session if student has already answer test
+				if ($data_login["level"] == "Student"){
+					$sql_test = "SELECT jawaban_pretest, jawaban_posttest FROM tb_nilai WHERE id_siswa = $user_id";
+					$query_test = mysqli_query($koneksi, $sql_test);
+					$data_test = mysqli_fetch_array($query_test,MYSQLI_BOTH);
+					$_SESSION['pretestresult'] = $data_test['jawaban_pretest'];
+					$_SESSION['posttestresult'] = $data_test['jawaban_posttest'];
+				}
 
-            if ($jumlah_login == 1 ){
-              session_start();
-              $_SESSION["ses_id"]=$data_login["id_pengguna"];
-              $_SESSION["ses_nama"]=$data_login["nama_pengguna"];
-              $_SESSION["ses_username"]=$data_login["username"];
-              $_SESSION["ses_password"]=$data_login["password"];
-              $_SESSION["ses_level"]=$data_login["level"];
-                
-              echo "<script>
-                    Swal.fire({title: 'Login Berhasil',
-						text: '',
-						icon: 'success',
-						confirmButtonText: 'OK'
-                    }).then((result) => {
-                        if (result.value) {
-                            window.location = 'index.php';
-                        }
-                    })</script>";
-              }else{
-              echo "<script>
-                    Swal.fire({title: 'Login Gagal',
-						text: '',
-						icon: 'error',
-						confirmButtonText: 'OK'
-                    }).then((result) => {
-                        if (result.value) {
-                            window.location = 'login.php';
-                        }
-                    })</script>";
-                }
+					
+				echo "<script>
+						Swal.fire({title: 'Selamat Datang <br> $user_name',
+							text: '',
+							icon: 'success',
+							confirmButtonText: 'OK'
+						}).then((result) => {
+							if (result.value) {
+								window.location = 'index.php';
+							}
+						})</script>";
+				}else{
+				echo "<script>
+						Swal.fire({title: 'Login Gagal',
+							text: '',
+							icon: 'error',
+							confirmButtonText: 'OK'
+						}).then((result) => {
+							if (result.value) {
+								window.location = 'login.php';
+							}
+						})</script>";
+				}
 			  }

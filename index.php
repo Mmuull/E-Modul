@@ -20,7 +20,7 @@ include "inc/koneksi.php";
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SI PERPUSTAKAAN</title>
+	<title>E-MODUL</title>
 	<link rel="icon" href="dist/img/logo.png">
 	<!-- Tell the browser to be responsive to screen width -->
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -39,6 +39,8 @@ include "inc/koneksi.php";
 	<!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
 	<link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+	<!-- Custom -->
+	<!-- <link rel="stylesheet" href="dist/css/Customskin.css"> -->
 
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
@@ -64,21 +66,6 @@ include "inc/koneksi.php";
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-
-				<div class="navbar-custom-menu">
-					<ul class="nav navbar-nav">
-						<!-- Messages: style can be found in dropdown.less-->
-						<li class="dropdown messages-menu">
-							<a class="dropdown-toggle">
-								<span>
-									<!-- <b>
-										Sistem Informasi Perpustakaan Berbasis Web V 1.0
-									</b> -->
-								</span>
-							</a>
-						</li>
-					</ul>
-				</div>
 			</nav>
 		</header>
 
@@ -96,10 +83,10 @@ include "inc/koneksi.php";
 					</div>
 					<div class="pull-left info">
 						<p>
-							<?php echo $data_nama; ?>
+							<?= $data_nama; ?>
 						</p>
 						<span class="label label-warning">
-							<?php echo $data_level; ?>
+							<?= $data_level; ?>
 						</span>
 					</div>
 				</div>
@@ -107,236 +94,149 @@ include "inc/koneksi.php";
 				<!-- /.search form -->
 				<!-- sidebar menu: : style can be found in sidebar.less -->
 				<ul class="sidebar-menu">
-					<li class="header">MAIN NAVIGATION</li>
-
 					<!-- Level  -->
 					<?php
-					if ($data_level == "Administrator") {
-					?>
+					switch ($data_level) {
+						case "Administrator": 
+						case "Guru":?>
+						<!-- ADMIN PRIVILEGE -->
+							<li class="header">ADMIN</li>
+							<li class="treeview">
+								<a href="?page=admin">
+									<i class="fa fa-dashboard"></i>
+									<span>Dashboard</span>
+									<span class="pull-right-container">
+									</span>
+								</a>
+							</li>
+							<li class="treeview">
+								<a href="?page=pengguna">
+									<i class="fa fa-user"></i>
+									<span>Pengguna</span>
+									<span class="pull-right-container">
+									</span>
+								</a>
+							</li>
 
-						<li class="treeview">
-							<a href="?page=admin">
-								<i class="fa fa-dashboard"></i>
-								<span>Dashboard</span>
-								<span class="pull-right-container">
-								</span>
-							</a>
-						</li>
+							<li class="treeview">
+								<a href="?page=siswa">
+								<!-- <a href="?page=siswa"> -->
+									<i class="fa fa-users"></i>
+									<span>Siswa</span>
+									<span class="pull-right-container">
+									</span>
+								</a>
+							</li>
 
-						<li class="treeview">
-							<a href="?page=cp">
-								<i class="fa fa-flag"></i>
-								<span>Capaian Pembelajaran</span>
-								<span class="pull-right-container">
-								</span>
-							</a>
-						</li>
+							<li class="treeview">
+								<a href="?page=nilai">
+									<i class="fa fa-bar-chart"></i>
+									<span>Nilai</span>
+									<span class="pull-right-container">
+									</span>
+								</a>
+							</li>
+							
+							<?php
+						case "Student": ?>
+							<li class="header">MAIN NAVIGATION</li>
+							<li class="treeview">
+								<a href="#">
+									<i class="fa fa-bookmark"></i>
+									<span>Pendahuluan</span>
+									<span class="pull-right-container">
+										<i class="fa fa-angle-left pull-right"></i>
+									</span>
+								</a>
+								<ul class="treeview-menu">
+									<li class="treeview">
+										<a href="?page=cp">
+											<i class="fa fa-flag"></i>
+											<span>Capaian Pembelajaran</span>
+										</a>
+									</li>	
+									<li class="treeview">
+										<a href="?page=tp">
+											<i class="fa fa-bullseye"></i>
+											<span>Tujuan Pembelajaran</span>
+										</a>
+									</li>
 
-						<li class="treeview">
-							<a href="?page=tp">
-								<i class="fa fa-bullseye"></i>
-								<span>Tujuan Pembelajaran</span>
-								<span class="pull-right-container">
-								</span>
-							</a>
-						</li>
+									<li class="treeview">
+										<a href="?page=langkahpbl">
+											<i class="fa fa-road"></i>
+											<!-- <i class="fa fa-shoe-prints"></i> -->
+											<span>Langkah Langkah PBL</span>
+										</a>
+									</li>
+									
+								</ul>
+							</li>
 
-						<li class="treeview">
-							<a href="?page=#">
-								<i class="fa fa-road"></i>
-								<!-- <i class="fa fa-shoe-prints"></i> -->
-								<span>Langkah Langkah PBL</span>
-								<span class="pull-right-container">
-								</span>
-							</a>
-						</li>
+							<li class="treeview">
+								<a href="?page=pretest">
+									<i class="fa fa-pencil"></i>
+									<span>Pretest</span>
+									<span class="pull-right-container">
+									</span>
+								</a>
+							</li>
 
-						<li class="treeview">
-							<a href="?page=#">
-								<i class="fa fa-book"></i>
-								<span>Uraian Materi</span>
-								<span class="pull-right-container">
-								</span>
-							</a>
-						</li>
+							<li class="treeview">
+								<a href="?page=materi">
+									<i class="fa fa-laptop"></i>
+									<span>Uraian Materi</span>
+									<span class="pull-right-container">
+									</span>
+								</a>
+							</li>
+							<li class="treeview">
+								<a href="?page=materi_pdf">
+									<i class="fa fa-laptop"></i>
+									<span>Uraian Materi PDF</span>
+									<span class="pull-right-container">
+									</span>
+								</a>
+							</li>
+							<li class="treeview">
+								<a href="?page=lkpd">
+									<i class="fa fa-book"></i>
+									<span>LKPD</span>
+									<span class="pull-right-container">
+									</span>
+								</a>
+							</li>
 
-						<li class="treeview">
-							<a href="?page=#">
-								<i class="fa fa-question"></i>
-								<span>Bantuan</span>
-								<span class="pull-right-container">
-								</span>
-							</a>
-						</li>
+							<li class="treeview">
+								<a href="?page=posttest">
+									<i class="fa fa-pencil-square-o"></i>
+									<span>Posttest</span>
+									<span class="pull-right-container">
+									</span>
+								</a>
+							</li>
 
-						<!-- <li class="treeview">
-							<a href="#">
-								<i class="fa fa-folder"></i>
-								<span>Kelola Data</span>
-								<span class="pull-right-container">
-									<i class="fa fa-angle-left pull-right"></i>
-								</span>
-							</a>
-							<ul class="treeview-menu">
+							
 
-								<li>
-									<a href="?page=MyApp/data_buku">
-										<i class="fa fa-book"></i>Data Buku</a>
-								</li>
-								<li>
-									<a href="?page=MyApp/data_agt">
-										<i class="fa fa-users"></i>Data Anggota</a>
-								</li>
-							</ul>
-						</li> -->
-
-						<!-- <li class="treeview">
-							<a href="?page=data_sirkul">
-								<i class="fa fa-refresh"></i>
-								<span>Sirkulasi</span>
-								<span class="pull-right-container">
-								</span>
-							</a>
-						</li> -->
-
-						<!-- <li class="treeview">
-							<a href="#">
-								<i class="fa fa-book"></i>
-								<span>Log Data</span>
-								<span class="pull-right-container">
-									<i class="fa fa-angle-left pull-right"></i>
-								</span>
-							</a>
-							<ul class="treeview-menu">
-
-								<li>
-									<a href="?page=log_pinjam">
-										<i class="fa fa-arrow-circle-o-down"></i>Peminjaman</a>
-								</li>
-								<li>
-									<a href="?page=log_kembali">
-										<i class="fa fa-arrow-circle-o-up"></i>Pengembalian</a>
-								</li>
-							</ul>
-						</li> -->
-
-
-						<!-- <li class="treeview">
-							<a href="#">
-								<i class="fa fa-print"></i>
-								<span>Laporan</span>
-								<span class="pull-right-container">
-									<i class="fa fa-angle-left pull-right"></i>
-								</span>
-							</a>
-							<ul class="treeview-menu">
-								<li>
-									<a href="?page=laporan_sirkulasi">
-										<i class="fa fa-file"></i>Laporan Sirkulasi</a>
-								</li>
-							</ul>
-						</li> -->
-
-
-						<li class="header">SETTING</li>
-
-						<li class="treeview">
-							<a href="?page=MyApp/data_pengguna">
-								<i class="fa fa-user"></i>
-								<span>Pengguna Sistem</span>
-								<span class="pull-right-container">
-								</span>
-							</a>
-						</li>
-
-					<?php
-					} elseif ($data_level == "Petugas") { /*
-					?>
-
-						<li class="treeview">
-							<a href="?page=petugas">
-								<i class="fa fa-dashboard"></i>
-								<span>Dashboard</span>
-								<span class="pull-right-container">
-								</span>
-							</a>
-						</li>
-
-						<li class="treeview">
-							<a href="#">
-								<i class="fa fa-folder"></i>
-								<span>Kelola Data</span>
-								<span class="pull-right-container">
-									<i class="fa fa-angle-left pull-right"></i>
-								</span>
-							</a>
-							<ul class="treeview-menu">
-
-								<li>
-									<a href="?page=MyApp/data_buku">
-										<i class="fa fa-book"></i>Data Buku</a>
-								</li>
-								<li>
-									<a href="?page=MyApp/data_agt">
-										<i class="fa fa-users"></i>Data Anggota</a>
-								</li>
-							</ul>
-						</li>
-
-						<li class="treeview">
-							<a href="?page=data_sirkul">
-								<i class="fa fa-refresh"></i>
-								<span>Sirkulasi</span>
-								<span class="pull-right-container">
-								</span>
-							</a>
-						</li>
-
-						<li class="treeview">
-							<a href="#">
-								<i class="fa fa-book"></i>
-								<span>Log Data</span>
-								<span class="pull-right-container">
-									<i class="fa fa-angle-left pull-right"></i>
-								</span>
-							</a>
-							<ul class="treeview-menu">
-
-								<li>
-									<a href="?page=log_pinjam">
-										<i class="fa fa-arrow-circle-o-down"></i>Peminjaman</a>
-								</li>
-								<li>
-									<a href="?page=log_kembali">
-										<i class="fa fa-arrow-circle-o-up"></i>Pengembalian</a>
-								</li>
-							</ul>
-						</li>
-
-						<li class="treeview">
-							<a href="#">
-								<i class="fa fa-print"></i>
-								<span>Laporan</span>
-								<span class="pull-right-container">
-									<i class="fa fa-angle-left pull-right"></i>
-								</span>
-							</a>
-							<ul class="treeview-menu">
-
-
-								<li>
-									<a href="?page=laporan_sirkulasi">
-										<i class="fa fa-file"></i>Laporan Sirkulasi</a>
-								</li>
-							</ul>
-						</li>
-
-						<li class="header">SETTING</li>
-
-					<?php */
-					}
-					?>
-
+							<li class="header">SETTINGS</li>
+							<li class="treeview">
+								<a href="#">
+									<i class="fa fa-question"></i>
+									<span>Bantuan</span>
+									<span class="pull-right-container">
+										<i class="fa fa-angle-left pull-right"></i>
+									</span>
+								</a>
+								<ul class="treeview-menu">
+									<li>
+										<a href="?page=MyApp/data_pengguna">
+											<i class="fa fa-user"></i>
+											<span>Pengguna Sistem</span>
+										</a>	
+									</li>
+								</ul>	
+							</li>
+							<?php }?>
 					<li>
 						<a href="logout.php" onclick="return confirm('Anda yakin keluar dari aplikasi ?')">
 							<i class="fa fa-sign-out"></i>
@@ -359,22 +259,44 @@ include "inc/koneksi.php";
 			<section class="content">
 				<?php 
 				if (isset($_GET['page'])) {
-					$hal = $_GET['page'];
-
-					switch ($hal) {
-							//Klik Halaman Home Pengguna
+					switch ($_GET['page']) {
+						// ADMIN or GURU
 						case 'admin':
 							include "home/admin.php";
 							break;
-						case 'petugas':
-							include "home/petugas.php";
+						case 'nilai':
+							include "admin/nilai/nilai_view.php";
+							break;
+						case 'pengguna': // It refers to table nama on database
+						case 'siswa':
+							include "admin/users/users_view.php";
 							break;
 
+						// SISWA AND PENGGUNA
 						case 'cp':
 							include "admin/cptp/capaianpembelajaran.php";
 							break;
 						case 'tp':
 							include "admin/cptp/tujuanpembelajaran.php";
+							break;
+						case 'langkahpbl':
+							include "admin/langkahpbl/langkahpbl.php";
+							break;
+
+						case 'materi':
+							include "admin/uraianmateri/uraianmateri.php";
+							break;
+						case 'materi_pdf':
+							include "admin/uraianmateri/uraianmateri_pdf.php";
+							break;
+						case 'lkpd':
+							include "admin/lkpd/lkpdtabel.php";
+							// include "admin/lkpd/lkpdspek.php";
+							break;
+
+						case 'pretest': // It refers to table nama on database
+						case 'posttest':
+							include "admin/preposttest/preposttest.php";
 							break;
 
 						/*
@@ -468,10 +390,10 @@ include "inc/koneksi.php";
 					}
 				} else {
 					// Auto Halaman Home Pengguna
-					if ($data_level == "Administrator") {
+					if ($data_level == "Administrator" || $data_level == "Guru") {
 						include "home/admin.php";
-					} elseif ($data_level == "Petugas") {
-						include "home/petugas.php";
+					} elseif ($data_level == "Student") {
+						include "admin/cptp/capaianpembelajaran.php";
 					}
 				} 
 				?>

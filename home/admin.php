@@ -1,47 +1,15 @@
 <?php
-	$sql = $koneksi->query("SELECT count(id_buku) as buku from tb_buku");
-	while ($data= $sql->fetch_assoc()) {
-	
-		$buku=$data['buku'];
-	}
-?>
-
-<?php
-	$sql = $koneksi->query("SELECT count(id_anggota) as agt from tb_anggota");
+	$sql = $koneksi->query("SELECT count(id_siswa) as agt from tb_siswa");
 	while ($data= $sql->fetch_assoc()) {
 	
 		$agt=$data['agt'];
 	}
 ?>
 
-<?php
-	$sql = $koneksi->query("SELECT count(id_sk) as pin from tb_sirkulasi where status='PIN'");
-	while ($data= $sql->fetch_assoc()) {
-	
-		$pin=$data['pin'];
-	}
-?>
-
-<?php
-	$sql = $koneksi->query("SELECT count(id_sk) as kem from tb_sirkulasi where status='KEM'");
-	while ($data= $sql->fetch_assoc()) {
-	
-		$kem=$data['kem'];
-	}
-?>
-
-<?php
-	$sql = $koneksi->query("SELECT count(id_sk) as kem from tb_sirkulasi where status='KEM'");
-	while ($data= $sql->fetch_assoc()) {
-	
-		$kem=$data['kem'];
-	}
-?>
-
 <!-- Content Header (Page header) -->
 <section class="content-header">
 	<h1>
-		Dashboard  Administrator
+		Dashboard  <?=ucfirst($_SESSION['ses_level'])?>
 	</h1>
 </section>
 
@@ -55,15 +23,15 @@
 			<div class="small-box bg-blue">
 				<div class="inner">
 					<h4>
-						<?= $buku; ?>
+						<?= "1";?>
 					</h4>
 
 					<p>Jadwal Kelas</p>
 				</div>
 				<div class="icon">
-					<i class="ion ion-stats-bars"></i>
+					<i class="fa fa-calendar"></i>
 				</div>
-				<a href="?page=MyApp/data_buku" class="small-box-footer">More info
+				<a href="?page=#" class="small-box-footer">More info
 					<i class="fa fa-arrow-circle-right"></i>
 				</a>
 			</div>
@@ -74,15 +42,15 @@
 			<div class="small-box bg-yellow">
 				<div class="inner">
 					<h4>
-						<?= $buku; ?>
+						<?= "2"; ?>
 					</h4>
 
 					<p>Nilai</p>
 				</div>
 				<div class="icon">
-					<i class="ion ion-person-add"></i>
+					<i class="fa fa-graduation-cap"></i>
 				</div>
-				<a href="?page=MyApp/data_agt" class="small-box-footer">More info
+				<a href="?page=#" class="small-box-footer">More info
 					<i class="fa fa-arrow-circle-right"></i>
 				</a>
 			</div>
@@ -93,15 +61,15 @@
 			<div class="small-box bg-green">
 				<div class="inner">
 					<h4>
-						<?= $pin; ?>
+						<?= "3"; ?>
 					</h4>
 
 					<p>Pretest Posttest</p>
 				</div>
 				<div class="icon">
-					<i class="ion ion-stats-bars"></i>
+					<i class="fa fa-pencil-square-o"></i>
 				</div>
-				<a href="?page=data_sirkul" class="small-box-footer">More info
+				<a href="?page=#" class="small-box-footer">More info
 					<i class="fa fa-arrow-circle-right"></i>
 				</a>
 			</div>
@@ -112,15 +80,15 @@
 			<div class="small-box bg-red">
 				<div class="inner">
 					<h4>
-						<?= $kem; ?>
+						<?= "4"; ?>
 					</h4>
 
 					<p>Uraian Materi</p>
 				</div>
 				<div class="icon">
-					<i class="ion ion-stats-bars"></i>
+					<i class="fa fa-book"></i>
 				</div>
-				<a href="?page=log_kembali" class="small-box-footer">More info
+				<a href="?page=materi" class="small-box-footer">More info
 					<i class="fa fa-arrow-circle-right"></i>
 				</a>
 			</div>

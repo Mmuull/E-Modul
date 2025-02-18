@@ -11,8 +11,8 @@ if (strlen($tambah) == 1){
 $format = "A"."00".$tambah;
  	}else if (strlen($tambah) == 2){
  	$format = "A"."0".$tambah;
-			}else (strlen($tambah) == 3){
-			$format = "A".$tambah
+			}else if (strlen($tambah) == 3){
+			$format = "A".$tambah;
 				}
 ?>
 

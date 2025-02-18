@@ -1,26 +1,26 @@
 <section class="content-header">
-	<h1 style="text-align:center;">
+	<h1 style="font-size: 32px; text-align:center;">
 		Capaian Pembelajaran
 	</h1>
 	<ol class="breadcrumb">
-		<li>
+		<!-- <li>
 			<a href="index.php">
 				<i class="fa fa-home"></i>
-				<b>E-Modul</b>
+				<b>Dashboard</b>
 			</a>
-		</li>
+		</li> -->
 	</ol>
 </section>
 <!-- Main content -->
 <section class="content">
-	<div class="box box-primary">
+	<div class="box box-primary" style="padding: 50px;">
 		<!-- /.box-header -->
 		<div class="box-body">
-			<p style="font-size: 16px; text-align: justify">
+			<p style="font-size: 18px; text-align: justify">
 				Pada akhir Fase D, peserta didik mampu menerapkan proses berpikir efektif dan efisien untuk menyelesaikan persoalan berlatar belakang informatika yang didasari data terstruktur, menentukan langkah-langkah untuk mengolah instruksi interaktif dan data yang dapat dijalankan oleh manusia atau mesin otomasi, dan memanfaatkan dengan optimal sekumpulan fasilitas yang tersedia, memanfaatkan data internet, serta mampu bersosialisasi dan berkolaborasi dengan baik, serta berkreasi dengan etis di dunia digital. 
 			</p>
 			<br>
-			<p style="font-size: 16px; text-align: justify">
+			<p style="font-size: 18px; text-align: justify">
 				Peserta didik mampu memahami cara kerja dan penggunaan mesin pencari di internet; mengetahui kredibilitas sumber informasi digital dan mengenal ekosistem media pers digital; membedakan fakta dan opini; memahami pemanfaatan perkakas teknologi digital untuk membuat laporan, presentasi, serta analisis dan interpretasi data; mampu mendeskripsikan komponen, fungsi, dan cara kerja komputer; memahami konsep dan penerapan konektivitas jaringan lokal dan internet baik kabel maupun nirkabel; dan mengetahui jenis ruang publik virtual; memahami pemanfaatan media digital untuk produksi dan diseminasi konten. Peserta didik mampu memahami pentingnya menjaga rekam jejak digital, mengamalkan toleransi dan empati di dunia digital, memahami dampak perundungan digital, membuat kata sandi yang aman, memahami pengamanan perangkat dari berbagai jenis malware, memilah informasi yang bersifat privat dan publik, melindungi data pribadi dan identitas digital, serta memiliki kesadaran penuh (mindfulness) dalam dunia digital.
 			</p>
 			<!-- <div class="table-responsive">
