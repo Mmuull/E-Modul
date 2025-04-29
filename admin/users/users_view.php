@@ -24,7 +24,7 @@
 		}
 		input{
 			border: 0;
-			max-width: 100px;
+			max-width: 120px;
 			/* appearance: none;
 			-webkit-appearance: none; */
 		}
@@ -87,12 +87,32 @@
 								<!-- Row Numbering -->
 								<td><?=$no?></td>
 								<?php 
-								$attribute_key = 0;
+								$attributetoskip = ["id_pengguna", "id_siswa"];
 								foreach ($userData as $key => $value) {
-									if ($attribute_key < 1) { $attribute_key++; continue; }?>
+									if (in_array(strtolower($key),$attributetoskip)) { continue; } // Skipping id display?> 
 									<td>
+										<!-- Level input -->
+										<?php if($key == "level"){ ?>
+											<input class="<?=$class?>" name="data<?=$no?>" id="<?= $userData['id_'.$table]?>" list="level" value="<?= $value?>" ondblclick="setToEdit(this)" readonly>
+											<!-- Give level option  -->
+											<datalist id="level"> 
+												<?php switch ($table) {
+													case 'pengguna':
+														echo "<option value='Administrator'>";
+														echo "<option value='Guru'>";
+														break;
+													case 'siswa':
+														echo "<option value='Student'>";
+														break;
+													default:
+														# code...
+														break; } ?>
+											</datalist>
+										<!-- Default -->
+										<?php } else { ?>
 										<input class="<?=$class?>" name="data<?=$no?>" id="<?= $userData['id_'.$table]?>" type="text" value="<?= $value?>" ondblclick="setToEdit(this)" readonly>
 										<span class="<?=$class?>" style="display: none;"><?= $value?></span>
+										<?php } ?>
 									</td>
 								<?php } ?>
 								<td>
@@ -165,6 +185,10 @@
 		function setToEdit(input){
 			// Make it editable and set background orange
 			input.removeAttribute('readonly');
+			if (input.getAttribute('list')) {
+				input.value = "";
+				input.placeholder = "Klik pilih opsi";
+			}
 			input.style.backgroundColor = '#F39C12';
 			input.parentNode.style.backgroundColor = '#F39C12';
 
@@ -222,7 +246,17 @@
 					});
 				} else {
 					// console.log('User Data 6:', userData[6]);
-					alert('Level only Administrator, Guru, or Student');
+					switch (<?=$table?>) {
+						case pengguna:
+							message = "Level only Administrator or Guru";
+							break;
+						case siswa:
+							message = "Level only Student";
+							break;
+						default:
+							break;
+					}
+					alert(`${message}`);
 				}
 			}
 		}
