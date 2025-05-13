@@ -40,12 +40,15 @@
 			/* width: 100%; */
 		}
 		span.question{
-			font-size: 21px;
+			font-size: 20px;
 		}
 		button.btn{
+			max-width: 100%;
 			margin: 1%;
+			text-align: justify;
 			border: none;
 			outline: none;
+			white-space: inherit;
 			/* color: white; */
 			/* pointer-events: none; */
 		}
@@ -87,7 +90,7 @@
 							if ($line[6] == $key){$color = "success";} 
 							if ($result[$index*2+1] == $key && $result[$index*2+1] != $line[6]) {$color = "danger";}
 						} else{ $color = "primary";} ?> 
-						<button class="btn btn-lg btn-<?= $color ?> <?= $isDissabled?>" name="<?= "btn".$line[0]?>" id="<?= $line[0].$key?>" onclick="checkClass(this)"><?= $key.". ".$line[$csvindex]?></button>
+						<button class="btn btn-lg btn-<?= $color ?> <?= $isDissabled?>" name="<?= "btn".$line[0]?>" id="<?= $line[0].$key?>" onclick="checkClass(this)"><?= "$key."?> <span style="overflow-wrap: break-word;"><?=$line[$csvindex]?></span> </button>
 						<?php 	if ($color == "success"){?><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgocTyVpIy46tZlR9nbhz11n7S3EsrnSYPSg&s" class="answer" alt="Correct Answer"><?php }
 								elseif ($color == "danger"){?><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL21HutellZS8TzF-_I1AeL1EtayJ2aHNxMQ&s" class="answer" alt="Wrong Image"><?php }?>
 						<br>
@@ -134,7 +137,7 @@
 						answers = answers + buttons[i].id
 					}
 				}
-				if (answers.length == 20){
+				if (answers.length == 35){
 					document.getElementById('answer').value = answers
 					document.result.submit()
 				}

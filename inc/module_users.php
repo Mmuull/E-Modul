@@ -74,6 +74,9 @@
     function updateUser($koneksi, $table, $id, $data){
         $set = []; 
         foreach ($data as $column => $value) {
+            if ($column == "password"){ // encript password
+                $value = md5($value);
+            }
             $set[] = "$column = '$value'";
         }
         $setString = implode(', ', $set);
@@ -101,9 +104,9 @@
 
         if ($table == 'siswa'){
             $query = "SELECT id_siswa FROM tb_siswa ORDER BY id_siswa DESC LIMIT 1";
-            $result = $koneksi->query($query);
-            $data = $result->fetch_assoc();
-            $id = $data['id_siswa'];
+            $data = $koneksi->query($query);
+            $fetch = $data->fetch_assoc();
+            $id = $fetch["id_siswa"];
 
             $sql = "INSERT INTO tb_nilai VALUE (NULL, $id, NULL, 0, NULL, 0, 0)";
             

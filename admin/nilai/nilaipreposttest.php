@@ -8,35 +8,38 @@
         $student_id = $_POST['student_id'];
         submitGrade($koneksi, $answers, $testtype, $student_id);
     }
-    if ($_GET['mode'] == "delete" && isset($_GET['id'])){
+    else if ($_GET['mode'] == "delete" && isset($_GET['id'])){
         deleteGrade($koneksi, $_GET['id']);
     }
 
     function submitGrade($koneksi, $answers, $testtype, $student_id){
         // Get Answer Key
         $file = fopen("../../dist/file/$testtype.csv","r");
-        if (strlen($answers) == 20 && $file !== FALSE && isset($_SESSION[$testtype.'result'])){
-            
+        if (strlen($answers) == 35 && $file !== FALSE && !isset($_SESSION[$testtype.'result'])){
+            echo "Grading begin ";
             // Grading
-            $index = 0; $grade = 0;
+            $index = 0; $grade = 0; $key = ['A', 'B', 'C', 'D'];
             while (($line = fgetcsv($file)) !== false) {
-                if ($answers[$index*2+1] == $line[6]) { $grade += 10; }
-                $index++;
+                if (!in_array($answers[$index*2+1], $key)) {$index++;}
+                if ($answers[$index*2+1] == $line[6]) { $grade += 6.67; $index++; }
             }
 
             // Push it into database
             $sql = "UPDATE tb_nilai SET jawaban_$testtype = '$answers', nilai_$testtype = '$grade' WHERE id_siswa = '$student_id'";
-            $koneksi->query($sql);
+            $koneksi->query($sql); 
+            // echo $sql;
 
             // Change Final Grade
             $data = $koneksi->query("SELECT nilai_pretest, nilai_posttest FROM tb_nilai WHERE id_siswa = '$student_id'");
+            // echo $data;
             $grade = $data->fetch_assoc();
             $finalGrade = array_sum($grade)/2;
 
             $sql = "UPDATE tb_nilai SET summary = $finalGrade WHERE id_siswa = '$student_id'";
+            // echo $sql;
             $koneksi->query($sql);
+            echo "Grading end ";
         }
-        
         // Put Answer to session for check mode
         $_SESSION[$testtype.'result'] = $answers; // For checking answers
         
@@ -57,6 +60,6 @@
 <script>
     function successProcedure(){
         console.log("Go to Pretest Check")
-        window.location.href = `../../index.php?page=<?=$testtype?>?mode=check`;
+        // window.location.href = `../../index.php?page=<?php // echo $testtype?>?mode=check`;
     }
 </script>

@@ -201,7 +201,7 @@
 				}); // console.log('jsObject After:', jsObject);
 
 				// Validation and execution
-				validOptions= [['Administrator', 'Guru'],['Student']]; // This doesn't need if input change by options
+				validOptions= [['Administrator', 'Guru'],['Student']]; // This doesn't needed if input same as options
 				pengguna = 0; siswa = 1;
 				if (validOptions[<?=$table?>].includes(userData[3]) || validOptions[<?=$table?>].includes(userData[6])) {
 					fetch('inc/module_users.php', {
@@ -222,7 +222,7 @@
 					});
 				} else {
 					// console.log('User Data 6:', userData[6]);
-					alert('Level only Administrator, Guru, or Student');
+					alert(`Level only Administrator, Guru, or Student`);
 				}
 			}
 		}
