@@ -431,7 +431,7 @@ include "inc/koneksi.php";
 		<script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
 
 		<!-- AdminLTE App -->
-		<script src="dist/js/app.min.js"></script>
+		<!-- <script src="dist/js/app.min.js"></script>  -->
 		<!-- AdminLTE for demo purposes -->
 		<script src="dist/js/demo.js"></script>
 		<!-- page script -->

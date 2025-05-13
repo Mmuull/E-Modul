@@ -24,7 +24,7 @@
 		}
 		input{
 			border: 0;
-			max-width: 120px;
+			max-width: 110px;
 			/* appearance: none;
 			-webkit-appearance: none; */
 		}
@@ -68,13 +68,13 @@
 		</div>
 		<!-- /.box-header -->
 		<div class="box-body">
-			<div class="table-responsive">
+			<div class="table-responsive" style="overflow-x: hidden;">
 				<table id="example1" class="table table-bordered table-striped">
 					<thead>
 						<tr>
 							<!-- Set all attribut as table header except id-->
 							<th>No</th>
-							<?php foreach ($tableAttributes as $index => $value) { if ($index != 0) {echo "<th>".ucwords($value)."</th>";} } ?>
+							<?php foreach ($tableAttributes as $index => $value) { if ($index != 0) {echo "<th>".ucwords(str_replace("_", " ", $value))."</th>";} } ?>
 							<th>Action</th>
 						</tr>
 					</thead>
@@ -91,9 +91,20 @@
 								foreach ($userData as $key => $value) {
 									if (in_array(strtolower($key),$attributetoskip)) { continue; } // Skipping id display?> 
 									<td>
+										<!-- Password input -->
+										<?php if($key == "password"){ ?>
+											<input class="<?=$class?>" title="Ubah password dengan format biasa" name="data<?=$no?>" id="<?= $userData['id_'.$table]?>" type="text" value="<?= $value?>" ondblclick="setToEdit(this)" placeholder="<?=ucwords($key)?>" readonly>
+										<!-- Jekel input -->
+										<?php }else if($key == "jekel"){ ?>
+											<input class="<?=$class?>" placeholder="" name="data<?=$no?>" id="<?= $userData['id_'.$table]?>" list="jekel" value="<?= $value?>" ondblclick="setToEdit(this)" readonly>
+											<!-- Give level option  -->
+											<datalist id="jekel"> 
+												<option value='Laki-laki'>
+												<option value='Perempuan'>
+											</datalist>
 										<!-- Level input -->
-										<?php if($key == "level"){ ?>
-											<input class="<?=$class?>" name="data<?=$no?>" id="<?= $userData['id_'.$table]?>" list="level" value="<?= $value?>" ondblclick="setToEdit(this)" readonly>
+										<?php }else if($key == "level"){ ?>
+											<input class="<?=$class?>" placeholder="" name="data<?=$no?>" id="<?= $userData['id_'.$table]?>" list="level" value="<?= $value?>" ondblclick="setToEdit(this)" readonly>
 											<!-- Give level option  -->
 											<datalist id="level"> 
 												<?php switch ($table) {
@@ -110,7 +121,7 @@
 											</datalist>
 										<!-- Default -->
 										<?php } else { ?>
-										<input class="<?=$class?>" name="data<?=$no?>" id="<?= $userData['id_'.$table]?>" type="text" value="<?= $value?>" ondblclick="setToEdit(this)" readonly>
+										<input class="<?=$class?>" name="data<?=$no?>" id="<?= $userData['id_'.$table]?>" value="<?= $value?>" ondblclick="setToEdit(this)" placeholder="<?=ucwords(str_replace("_", " ", $key));?>" readonly>
 										<span class="<?=$class?>" style="display: none;"><?= $value?></span>
 										<?php } ?>
 									</td>
@@ -134,7 +145,7 @@
 						<tr>
 							<form action="inc/module_users.php" method="post">
 								<input type="hidden" value="<?=$table?>" name="table" id="table" required>
-								<td> <?= $no ?> </td>
+								<td><span><?= $no ?></span></td>
 								<td>
 									<input type="text" name="<?= $table?>_name" id="<?= $table?>_name" placeholder="Nama" max="35" required>
 								</td>
@@ -178,6 +189,7 @@
 					</tbody>
 				</table>
 			</div>
+			<span style="color: red;">* Klik 2 kali untuk edit. Tekan sidebar untuk batal</span>
 		</div>
 	</div>
 

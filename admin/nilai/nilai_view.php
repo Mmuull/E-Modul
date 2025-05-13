@@ -21,7 +21,7 @@
 		</div> -->
 		<!-- /.box-header -->
 		<div class="box-body">
-			<div class="table-responsive">
+			<div class="table-responsive" style="overflow-x: hidden;">
 				<?php 
 					$query = "SELECT n.id_nilai, n.id_siswa, s.nama_siswa, s.kelas, n.nilai_pretest, n.nilai_posttest, n.summary 
 					FROM tb_nilai n JOIN tb_siswa s 
@@ -67,6 +67,8 @@
 					</tbody>
 				</table>
 			</div>
+			<span style="color: red;">* Nilai akan dibuat ketika Siswa baru dibuat</span><br>
+			<span style="color: red;">** Data nilai otomatis diperbarui saat Siswa selesai mengerjakan tes</span>
 		</div>
 	</div>
 
