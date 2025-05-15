@@ -24,7 +24,7 @@ include "inc/koneksi.php";
 	<link rel="icon" href="dist/img/logo.png">
 	<!-- Tell the browser to be responsive to screen width -->
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-	<!-- Bootstrap 3.3.6 -->
+	<!-- Bootstrap 5.3.3 -->
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -39,8 +39,6 @@ include "inc/koneksi.php";
 	<!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
 	<link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
-	<!-- Custom -->
-	<!-- <link rel="stylesheet" href="dist/css/Customskin.css"> -->
 
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
@@ -58,7 +56,7 @@ include "inc/koneksi.php";
 				</span>
 			</a>
 			<!-- Header Navbar: style can be found in header.less -->
-			<nav class="navbar navbar-static-top">
+			<nav class="navbar navbar-expand navbar-white">
 				<!-- Sidebar toggle button-->
 				<a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
 					<span class="sr-only">Toggle navigation</span>
@@ -190,22 +188,22 @@ include "inc/koneksi.php";
 									</span>
 								</a>
 							</li>
-							<li class="treeview">
+							<!-- <li class="treeview">
 								<a href="?page=materi_pdf">
 									<i class="fa fa-laptop"></i>
 									<span>Uraian Materi PDF</span>
 									<span class="pull-right-container">
 									</span>
 								</a>
-							</li>
-							<li class="treeview">
+							</li> -->
+							<!-- <li class="treeview">
 								<a href="?page=lkpd">
 									<i class="fa fa-book"></i>
 									<span>LKPD</span>
 									<span class="pull-right-container">
 									</span>
 								</a>
-							</li>
+							</li> -->
 
 							<li class="treeview">
 								<a href="?page=posttest">
@@ -284,103 +282,22 @@ include "inc/koneksi.php";
 							break;
 
 						case 'materi':
-							include "admin/uraianmateri/uraianmateri.php";
+							include "admin/uraianmateri/materi_navigation.php";
 							break;
-						case 'materi_pdf':
-							include "admin/uraianmateri/uraianmateri_pdf.php";
+						case 'materihardware':							
+							include "admin/uraianmateri/materi_hardware.php";
 							break;
-						case 'lkpd':
-							include "admin/lkpd/lkpdtabel.php";
-							// include "admin/lkpd/lkpdspek.php";
+						case 'materispesifikasi':							
+							include "admin/uraianmateri/materi_specification.php";
+							break;
+						case 'materiproses':							
+							include "admin/uraianmateri/materi_process.php";
 							break;
 
 						case 'pretest': // It refers to table nama on database
 						case 'posttest':
 							include "admin/preposttest/preposttest.php";
 							break;
-
-						/*
-							//Pengguna
-						case 'MyApp/data_pengguna':
-							include "admin/pengguna/data_pengguna.php";
-							break;
-						case 'MyApp/add_pengguna':
-							include "admin/pengguna/add_pengguna.php";
-							break;
-						case 'MyApp/edit_pengguna':
-							include "admin/pengguna/edit_pengguna.php";
-							break;
-						case 'MyApp/del_pengguna':
-							include "admin/pengguna/del_pengguna.php";
-							break;
-
-
-							//agt
-						case 'MyApp/data_agt':
-							include "admin/agt/data_agt.php";
-							break;
-						case 'MyApp/add_agt':
-							include "admin/agt/add_agt.php";
-							break;
-						case 'MyApp/edit_agt':
-							include "admin/agt/edit_agt.php";
-							break;
-						case 'MyApp/del_agt':
-							include "admin/agt/del_agt.php";
-							break;
-						case 'MyApp/print_agt':
-							include "admin/agt/print_agt.php";
-							break;
-						case 'MyApp/print_allagt':
-							include "admin/agt/print_allagt.php";
-							break;
-
-
-							//buku
-						case 'MyApp/data_buku':
-							include "admin/buku/data_buku.php";
-							break;
-						case 'MyApp/add_buku':
-							include "admin/buku/add_buku.php";
-							break;
-						case 'MyApp/edit_buku':
-							include "admin/buku/edit_buku.php";
-							break;
-						case 'MyApp/del_buku':
-							include "admin/buku/del_buku.php";
-							break;
-
-							//sirkul
-						case 'data_sirkul':
-							include "admin/sirkul/data_sirkul.php";
-							break;
-						case 'add_sirkul':
-							include "admin/sirkul/add_sirkul.php";
-							break;
-						case 'panjang':
-							include "admin/sirkul/panjang.php";
-							break;
-						case 'kembali':
-							include "admin/sirkul/kembali.php";
-							break;
-
-							//log
-						case 'log_pinjam':
-							include "admin/log/log_pinjam.php";
-							break;
-						case 'log_kembali':
-							include "admin/log/log_kembali.php";
-							break;
-
-							//laporan
-						case 'laporan_sirkulasi':
-							include "admin/laporan/laporan_sirkulasi.php";
-							break;
-						case 'MyApp/print_laporan':
-							include "admin/laporan/print_laporan.php";
-							break;
-						*/
-
 
 							//default
 						default:
@@ -404,34 +321,20 @@ include "inc/koneksi.php";
 			<!-- /.content -->
 		</div>
 
-		<!-- /.content-wrapper 
-
-		<footer class="main-footer">
-			<div class="pull-right hidden-xs">
-			</div>
-			<strong>Copyright &copy;
-				<a href="https://www.facebook.com/">Muhammad Ivan Setiawan</a>.</strong> All rights reserved.
-		</footer>
-		<div class="control-sidebar-bg"></div>
-		-->
-
-		<!-- ./wrapper -->
-
 		<!-- jQuery 2.2.3 -->
 		<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
 			 
-		<!--Bootstrap 3.3.6 -->
+		<!--Bootstrap 5.3.3 -->
 			
 		<script src = "bootstrap/js/bootstrap.min.js"></script>
 		
-
-		<script src="plugins/select2/select2.full.min.js"></script>
 		<!-- DataTables -->
+		<script src="plugins/select2/select2.full.min.js"></script>
 		<script src="plugins/datatables/jquery.dataTables.min.js"></script>
 		<script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
 
 		<!-- AdminLTE App -->
-		<!-- <script src="dist/js/app.min.js"></script>  -->
+		<script src="dist/js/app.min.js"></script>
 		<!-- AdminLTE for demo purposes -->
 		<script src="dist/js/demo.js"></script>
 		<!-- page script -->

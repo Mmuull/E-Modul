@@ -93,3 +93,20 @@
 				</a>
 			</div>
 		</div>
+		<!-- <div class="col-lg-6 col-xs-12">
+			Info box 
+			<div class="info-box">
+				<span class="info-box-icon bg-blue"><i class="fa fa-bookmark"></i></span>
+				<div class="info-box-content">
+					<span class="info-box-text">Bookmarks</span>
+					<span class="info-box-number">41,410</span>
+					<div class="progress">
+						<div class="progress-bar bg-blue" style="width: 70%"></div>
+					</div>
+					<span class="progress-description">
+						70% Increase in 30 Days
+					</span>
+				</div>
+			</div>
+		</div> -->
+		

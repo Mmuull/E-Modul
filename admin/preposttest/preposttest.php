@@ -1,16 +1,4 @@
 <section class="content-header">
-	<h1 style="font-size: 32px; text-align:center;">
-		<?= ucfirst($_GET['page'])?>
-	</h1>
-	<ol class="breadcrumb">
-		<!-- <li>
-			<a href="index.php">
-				<i class="fa fa-home"></i>
-				<b>Dashboard</b>
-			</a>
-		</li> -->
-	</ol>
-	<!-- Main content -->
 	<style>
 		table, thead, th, td{
 			border: 1px solid black;
@@ -32,22 +20,46 @@
 			padding-left: 15%;
 			padding-right: 15%;
 		}
-		div.content{
-			padding: 5% 15% 5%;
+		section.content-main{
+			padding: 0 15px 15px 15px;
 		}
-		div.choices{
+		div.content{
+			margin: 0 15% 0;
+		}
+		div.container{
 			padding: 5%;
-			/* width: 100%; */
+			border-radius: 8px;
+		}
+		hr{
+			margin: 10px 0 10px;
+		}
+		span.header{
+			font-size: 18px;
 		}
 		span.question{
 			font-size: 21px;
+		}
+		span.rednote{
+			font-size: 16px;
 		}
 		button.btn{
 			margin: 1%;
 			border: none;
 			outline: none;
-			/* color: white; */
-			/* pointer-events: none; */
+			color: white;
+			max-width: 100%;
+			white-space: inherit;
+		}
+		div.btn-answer{
+			display: inline-flex;
+		}
+		span.btn-answer{
+			/* display: block; */
+			text-align: left;
+			overflow-wrap: break-word;
+		}
+		span.key{
+			min-width: 20px;
 		}
 		button.disabled{
 			pointer-events: none;
@@ -57,6 +69,26 @@
 			height: 25px;
 		}
 	</style>
+	<div class="content">
+		<div class="box box-primary container" style="border-top: 15px solid #3c8dbc;">
+			<span class="header" style="font-size: 32px;">
+				<?= ucfirst($_GET['page'])?>
+			</span>
+			<br><br>
+			<span class="header">
+				Lorem Ipsum is a widely used placeholder text in design and publishing, originating from a work by Cicero, and is often generated for use in layouts and mockups.
+			</span>
+			<hr>
+			<span class="header">
+				Lorem Ipsum is a widely used placeholder text in design and publishing, originating from a work by Cicero, and is often generated for use in layouts and mockups.
+			</span>
+			<hr>
+			<span class="rednote" style="color: red;">* Lorem Ipsum is a widely used placeholder text in design and publishing</span>
+		</div>	
+	</div>
+	<!-- Main content -->
+</section>
+<section class="content-main">
 	<?php 
 		// Initialize
 		$testtype = $_GET['page'];
@@ -74,7 +106,7 @@
 	?>
 	<div class="content">
 		<?php while (($line = fgetcsv($file)) !== false) { ?>
-		<div class="box box-primary choices">
+		<div class="box box-primary container">
 			<span class="question"> <?= $line[0].". ".$line[1]?></span>
 			<?php $line[0] = $line[0] == 10 ? "X" : $line[0] // Change 10 to X.?> 
 			<div class="box-header with-border">
@@ -87,7 +119,12 @@
 							if ($line[6] == $key){$color = "success";} 
 							if ($result[$index*2+1] == $key && $result[$index*2+1] != $line[6]) {$color = "danger";}
 						} else{ $color = "primary";} ?> 
-						<button class="btn btn-lg btn-<?= $color ?> <?= $isDissabled?>" name="<?= "btn".$line[0]?>" id="<?= $line[0].$key?>" onclick="checkClass(this)"><?= $key.". ".$line[$csvindex]?></button>
+						<button class="btn btn-lg btn-<?= $color ?> <?= $isDissabled?>" name="<?= "btn".$line[0]?>" id="<?= $line[0].$key?>" onclick="checkClass(this)">
+							<div class="btn-answer">
+								<span class="key"><?=$key."."?></span>
+								<span class="btn-answer"><?=$line[$csvindex]?></span>
+							</div>
+						</button>
 						<?php 	if ($color == "success"){?><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgocTyVpIy46tZlR9nbhz11n7S3EsrnSYPSg&s" class="answer" alt="Correct Answer"><?php }
 								elseif ($color == "danger"){?><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL21HutellZS8TzF-_I1AeL1EtayJ2aHNxMQ&s" class="answer" alt="Wrong Image"><?php }?>
 						<br>

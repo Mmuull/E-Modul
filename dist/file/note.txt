@@ -1,0 +1,136 @@
+Seorang guru informatika menjelaskan bahwa perangkat keras komputer terbagi menjadi beberapa jenis berdasarkan fungsinya, seperti input, proses, dan output. <br><br>Dari pernyataan di atas Manakah contoh perangkat yang berfungsi sebagai perangkat input?
+
+Printer
+Mouse
+Speaker
+Monitor
+
+
+Seorang siswa mengalami kesulitan ketika mengetik di komputer karena beberapa tombol tidak berfungsi dengan baik.<br><br>Dari pernyataan di atas ,  Perangkat keras apa yang harus di ganti?
+
+Monitor
+Keyboard
+Hard Disk
+RAM
+
+
+Siti adalah seorang siswi kelas 7 yang baru belajar tentang komputer. Suatu hari, dia ingin membuat tugas sekolah menggunakan Microsoft Word di komputer milik ayahnya. Saat komputer dinyalakan, Siti melihat logo Windows muncul di layar, lalu setelah beberapa detik, tampilan desktop muncul. Dia kemudian menggunakan keyboard untuk mengetik teks dan mouse untuk mengatur format tulisan.<br><br>Berdasarkan pernyataan di atas, perangkat keras utama yang digunakan Siti dalam bekerja dengan komputer adalah...
+
+Monitor, CPU, Mouse, Keyboard
+RAM, Printer, Speaker, Flashdisk
+Hard disk, Scanner, Sound Card, Projector
+VGA Card, Power Supply, Joystick
+
+
+Fadil ingin membeli perangkat tambahan untuk komputer gaming miliknya. Ia ingin meningkatkan kualitas tampilan dan suara saat bermain game. Selain itu, ia juga membutuhkan perangkat untuk mengontrol permainan dengan lebih nyaman.<br><br>Dari pernyataan di atas, manakah kelompok perangkat yang paling sesuai dengan kebutuhannya?
+
+(<b>Input</b>): Joystick | (<b>Pemrosesan</b>): CPU | (<b>Penyimpanan</b>): Hard disk | (<b>Output</b>): Monitor, Speaker
+(<b>Input</b>): Mouse, Scanner | (<b>Pemrosesan</b>): RAM | (<b>Penyimpanan</b>): Flashdisk | (<b>Output</b>): Keyboard, CPU
+(<b>Input</b>): Hard disk, SSD | (<b>Pemrosesan</b>): Joystick | (<b>Penyimpanan</b>): Keyboard | (<b>Output</b>): Scanner, Printer
+(<b>Input</b>): Printer | (<b>Pemrosesan</b>): Monitor | (<b>Penyimpanan</b>): CPU | (<b>Output</b>): Mouse, Keyboard
+
+
+Budi ingin mendengarkan lagu dari komputernya. Ia membuka aplikasi pemutar musik dan menekan tombol "Play". Beberapa saat kemudian, ia dapat mendengar suara lagu tersebut.<br><br>Dari pernyataan di atas,  Perangkat keras yang memungkinkan Budi mendengar suara dari komputer adalah...
+
+Monitor 
+Printer
+Speaker
+Keyboard
+
+
+Bu Rini adalah seorang guru informatika yang ingin mengonversi dokumen fisik menjadi file digital agar bisa dikirim melalui email kepada murid-muridnya. Ia memerlukan perangkat keras yang dapat membaca teks dari dokumen cetak dan mengubahnya menjadi file di komputer.<br><br>Dari pernyataan di atas , Perangkat keras apa yang paling sesuai dengan kebutuhan Bu Rini?
+
+Printer, karena dapat mencetak dokumen dari komputer
+Scanner, karena dapat mengubah dokumen fisik menjadi file digital
+Speaker, karena dapat menampilkan suara dari komputer
+Keyboard, karena dapat memasukkan data secara manual ke dalam komputer
+
+
+Beni adalah seorang desainer grafis yang menggunakan komputer untuk mengedit gambar beresolusi tinggi. Saat bekerja, ia sering mengalami keterlambatan dalam proses rendering gambar. Setelah berkonsultasi dengan teknisi, ia diberi saran untuk meningkatkan salah satu komponen komputernya.<br><br>Dari pernyataan di atas , Komponen perangkat keras mana yang harus ditingkatkan oleh Rudi untuk mempercepat rendering gambar?
+
+Hard disk, karena menyimpan sistem operasi dan file proyek
+VGA Card, karena berfungsi untuk memproses tampilan grafis dengan lebih cepat
+Mouse, karena berfungsi untuk mengontrol pergerakan kursor dalam desain grafis
+Printer, karena dapat mencetak hasil desain dalam bentuk fisik
+
+
+Doni ingin menyimpan banyak file tugas dan video pembelajaran di dalam komputernya. Namun, setelah beberapa waktu, ia mendapatkan peringatan bahwa kapasitas penyimpanan hampir penuh.<br><br>Dari pernyataan di atas , Perangkat keras apa yang berkaitan langsung dengan penyimpanan data dalam komputer?
+
+RAM
+Hard Disk atau SSD
+VGA Card
+Speaker
+
+
+Pak Agus ingin mempresentasikan materi pelajaran di kelas menggunakan komputer. Ia ingin agar suara dari presentasi tersebut bisa terdengar dengan jelas oleh semua siswa di dalam ruangan.<br><br>Dari pernyataan di atas , Perangkat keras apa yang bisa digunakan Pak Agus untuk memperbesar suara dari komputer?
+
+Speaker
+Monitor
+Scanner
+Keyboard
+
+Sebuah perusahaan ingin meningkatkan kecepatan sistem komputernya tanpa harus mengganti seluruh perangkat keras. Teknisi menyarankan untuk mengganti salah satu komponen agar proses booting lebih cepat dan loading program lebih responsif.<br><br>Dari pernyataan di atas Komponen perangkat keras apa yang sebaiknya ditingkatkan untuk mempercepat booting dan akses program?
+
+HDD ke SSD
+Keyboard ke Joy Stick
+Monitor ke Resolusi lebih besar
+Speaker ke kualitas lebih tinggi
+
+
+Rina sedang mengetik sebuah dokumen di komputernya menggunakan keyboard. Saat ia menekan tombol pada keyboard, teks muncul di layar monitor. <br><br>Dari pernyataan di atas , bagaimana urutan alur kerja perangkat keras yang terjadi dalam proses ini adalah...
+
+Keyboard &#8594 CPU &#8594 RAM &#8594 Monitor
+Monitor &#8594 CPU &#8594 Keyboard &#8594 RAM
+RAM &#8594 Keyboard &#8594 CPU &#8594 Monitor
+Keyboard &#8594 Monitor &#8594 CPU &#8594 RAM
+
+Saat menggunakan komputer, Fajar merasa bahwa komputer ternya berjalan sangat lambat, terutama saat membuka banyak aplikasi secara bersamaan.<br><br>Dari pernyataan di atas ,  Apa langkah pertama yang bisa dilakukan untuk mengatasi masalah ini?
+
+Menutup aplikasi yang tidak diperlukan dan membersihkan file sementara
+Mengganti CPU dengan model terbaru
+Menghapus seluruh data di hard disk
+Mengganti kartu grafis dengan yang lebih mahal
+
+
+Budi ingin mencetak dokumen untuk presentasi besok. Namun, saat ia mencoba mencetak, tidak ada reaksi dari printer. Lampu indikator menyala, tetapi tidak ada aktivitas pencetakan.<br><br>
+Berikut adalah beberapa langkah yang dapat dilakukan:<br>
+1.Memeriksa apakah kabel USB printer sudah terhubung dengan benar ke komputer.<br>
+2.Memeriksa status printer di komputer untuk melihat apakah ada peringatan error.<br>
+3.Memastikan bahwa ada cukup kertas di baki printer.<br>
+4.Mengecek level tinta atau toner printer.<br>
+5.Menjalankan perintah "Print Test Page" untuk melihat apakah printer bisa mencetak tanpa dokumen dari komputer.<br><br>
+Dari langkah-langkah di atas, urutan yang paling sistematis untuk menyelesaikan pernyataan di atas adalah...
+
+3 &#8594 1 &#8594 2 &#8594 4 &#8594 5 
+1 &#8594 3 &#8594 2 &#8594 4 &#8594 5 
+4 &#8594 6 &#8594 2 &#8594 5 &#8594 1 
+5 &#8594 1 &#8594 3 &#8594 4 &#8594 2 
+
+
+Erlan  memiliki laptop dengan beberapa tombol yang tidak berfungsi. Ia memperhatikan bahwa dua teman sekampusnya mengalami masalah yang sama. Setelah diperiksa, ternyata semua laptop yang mengalami masalah ini pernah terkena tumpahan air di keyboard.<br><br>Dari pernyataan di atas , apa solusi yang seharusnya dilakukan segera setelah keyboard terkena air adalah...
+
+Menggunakan hair dryer untuk mengeringkan keyboard
+Langsung melepas baterai dan mematikan laptop sebelum mengeringkannya
+Membiarkannya saja karena kemungkinan akan normal kembali
+Menggunakan keyboard eksternal tanpa memperbaiki yang rusak
+
+
+Eka ingin mengakses file dari flash disk, tetapi perangkat tidak muncul di File Explorer.<br><br>
+Berikut adalah beberapa langkah yang dapat dilakukan:<br>
+1.Mencoba menghubungkan flash disk ke port USB lain.<br>
+2.Menggunakan flash disk lain untuk memastikan masalah bukan pada komputer.<br>
+3.Mengecek Device Manager apakah flash disk terdeteksi tetapi tidak dikenali.<br>
+4.Jika masih tidak muncul, mencoba memformat flash disk menggunakan Disk Management.<br>
+5.Jika tetap bermasalah, mempertimbangkan untuk mengganti flash disk dengan yang baru.<br><br>
+Dari langkah-langkah di atas, urutan yang paling sistematis untuk menyelesaikan pernyataan di atas adalah...
+
+2 &#8594 3 &#8594 1 &#8594 4 &#8594 5
+1 &#8594 2 &#8594 3 &#8594 4 &#8594 5
+3 &#8594 1 &#8594 4 &#8594 2 &#8594 5
+4 &#8594 3 &#8594 2 &#8594 1 &#8594 5
+
+
+
+
+
+
