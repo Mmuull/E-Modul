@@ -18,7 +18,7 @@
 	</style>
 	<div class="box box-primary" style="padding: 50px;">
 		<div class="content-header">
-			<a href="?page=materi" class="btn btn-lg btn-primary" title="Kembali"><i class="fa fa-arrow-left"></i></a>
+			<a href="?page=materi" class="btn btn-lg btn-primary" title="Uraian Materi Menu"><i class="fa fa-arrow-left"></i></a>
 		</div>
 		<h4 style="font-size: 18px;font-weight: bold;text-align: center;">Spesifikasi Perangkat Keras</h4>
 		<div class="box-body">
@@ -45,12 +45,12 @@
 			<br>
 		</div>
 		<div class="content-footer">
-			<a href="?page=materihardware&hardware=storage" class="btn btn-lg btn-primary btn-left" title="Kembali">
+			<a href="?page=materihardware&hardware=storage" class="btn btn-lg bg-red btn-left" title="Kembali">
 				<i class="fa fa-arrow-left"> </i>
 				<span style="font-family: Arial, Helvetica, sans-serif;">Perangkat Storage</span>
 			</a>
-			<a href="?page=materiproses" class="btn btn-lg btn-primary btn-right" title="Selanjutnya">
-				<span style="font-family: Arial, Helvetica, sans-serif;">Proses Kmputer</span>
+			<a href="?page=materiproses" class="btn btn-lg bg-orange btn-right" title="Selanjutnya">
+				<span style="font-family: Arial, Helvetica, sans-serif;">Proses Komputer</span>
 				<i class="fa fa-arrow-right"> </i>
 			</a>
 		</div>

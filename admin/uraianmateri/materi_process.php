@@ -38,7 +38,7 @@
 	</style>
 	<div class="box box-primary" style="padding: 50px;">
 		<div class="content-header">
-			<a href="?page=materi" class="btn btn-lg btn-primary" title="Kembali"><i class="fa fa-arrow-left"></i></a>
+			<a href="?page=materi" class="btn btn-lg btn-primary" title="Uraian Materi Menu"><i class="fa fa-arrow-left"></i></a>
 		</div>
 		<!-- /.box-header -->
 		<?php 
@@ -74,7 +74,7 @@
 			<?php $no++; }?>
 		</table>
 		<div class="content-footer">
-			<a href="?page=materispesifikasi" class="btn btn-lg btn-primary btn-left" title="Kembali">
+			<a href="?page=materispesifikasi" class="btn btn-lg bg-teal btn-left" title="Kembali">
 				<i class="fa fa-arrow-left"> </i>
 				<span style="font-family: Arial, Helvetica, sans-serif;">Spesifikasi Komputer</span>
 			</a>

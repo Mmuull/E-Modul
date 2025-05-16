@@ -74,7 +74,7 @@
 
 	<script>
 		function deleteData(no){
-			if (confirm("Yakin akan dihapus?")){
+			if (confirm("Yakin akan atur ulang nilai siswa?")){
 				window.location.href = `admin/nilai/nilaipreposttest.php?mode=delete&id=${no}`
 			}
 		}

@@ -18,7 +18,7 @@
 	</style>
 	<div class="box box-primary" style="padding: 2% 5% 2%;">
 		<div class="content-header">
-			<a href="?page=materi" class="btn btn-lg btn-primary" title="Kembali"><i class="fa fa-arrow-left"></i></a>
+			<a href="?page=materi" class="btn btn-lg btn-primary" title="Uraian Materi Menu"><i class="fa fa-arrow-left"></i></a>
 		</div>
 		<h3 style="font-size: 32px; text-align:center;">
 			Perangkat Keras Komputer
@@ -35,6 +35,13 @@
 		$section = $_GET['hardware'];
 		$section_materi = ['input',  'process', 'output', 'storage'];
 		$section_index = array_search($section, $section_materi);
+
+		$btnnavcolor = [
+			"input" => "blue",
+			"process" => "lime",
+			"output" => "yellow",
+			"storage" => "red"
+		];
 		
 		$file = fopen("dist/file/materihardware.csv","r"); ?>
 		<section id="<?php echo $section?>"><br>
@@ -74,17 +81,17 @@
 			</div>
 			<div class="content-footer">
 				<?php if ($section_index != 0) {?>
-				<a href="?page=materihardware&hardware=<?= $section_materi[$section_index - 1] ?>" class="btn btn-lg btn-primary btn-left" title="Kembali">
+				<a href="?page=materihardware&hardware=<?= $section_materi[$section_index - 1] ?>" class="btn btn-lg bg-<?=$btnnavcolor[$section_materi[$section_index - 1]]?> btn-left" title="Kembali">
 					<i class="fa fa-arrow-left"> </i>
 					<span style="font-family: Arial, Helvetica, sans-serif;">Perangkat <?= ucfirst($section_materi[$section_index - 1]) ?></span>
 				</a>
 				<?php } if ($section_index != count($section_materi)- 1) {?>
-				<a href="?page=materihardware&hardware=<?= $section_materi[$section_index + 1] ?>" class="btn btn-lg btn-primary btn-right" title="Selanjutnya">
+				<a href="?page=materihardware&hardware=<?= $section_materi[$section_index + 1] ?>" class="btn btn-lg bg-<?=$btnnavcolor[$section_materi[$section_index + 1]]?> btn-right" title="Selanjutnya">
 					<span style="font-family: Arial, Helvetica, sans-serif;">Perangkat <?= ucfirst($section_materi[$section_index + 1]) ?></span>
 					<i class="fa fa-arrow-right"> </i>
 				</a>
 				<?php } else {?>
-				<a href="?page=materispesifikasi" class="btn btn-lg btn-primary btn-right" title="Selanjutnya">
+				<a href="?page=materispesifikasi" class="btn btn-lg bg-teal btn-right" title="Selanjutnya">
 					<span style="font-family: Arial, Helvetica, sans-serif;">Spesifikasi Komputer</span>
 					<i class="fa fa-arrow-right"> </i>
 				</a>

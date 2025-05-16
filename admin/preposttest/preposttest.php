@@ -171,7 +171,7 @@
 						answers = answers + buttons[i].id
 					}
 				}
-				if (answers.length == 20){
+				if (answers.length == 35){
 					document.getElementById('answer').value = answers
 					document.result.submit()
 				}

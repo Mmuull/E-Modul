@@ -42,7 +42,7 @@
             array_push($data, 
                 $_POST['siswa_name'],
                 $_POST['siswa_username'],
-                mysqli_real_escape_string($koneksi,md5($_POST['siswa_password'])),
+                mysqli_real_escape_string($koneksi, md5($_POST['siswa_password'])),
                 $_POST['siswa_gender'],
                 $_POST['siswa_kelas'],
                 $_POST['siswa_email'],
@@ -57,7 +57,8 @@
             $data = json_decode($rawData, true);
             $table = $data['table']; unset($data['table']);
             $id = $data["id_$table"];
-
+            // Weak password validation
+            if (strlen($data['password']) != 32){$data['password'] = md5($data['password']);}
             echo updateUser($koneksi,$table, $id, $data);
         }
     }
@@ -99,15 +100,15 @@
 
         $koneksi->query($sql);
 
-        if ($table == 'siswa'){
-            $query = "SELECT id_siswa FROM tb_siswa ORDER BY id_siswa DESC LIMIT 1";
-            $id = $koneksi->query($query);
+        // if ($table == 'siswa'){
+        //     $query = "SELECT id_siswa FROM tb_siswa ORDER BY id_siswa DESC LIMIT 1";
+        //     $id = $koneksi->query($query);
 
-            $sql = "INSERT INTO tb_nilai VALUE (NULL, $id, NULL, 0, NULL, 0, 0)";
+        //     $sql = "INSERT INTO tb_nilai VALUE (NULL, $id, NULL, 0, NULL, 0, 0)";
             
-            // echo $sql;
-            $koneksi->query($sql);
-        }
+        //     // echo $sql;
+        //     $koneksi->query($sql);
+        // }
 
         echo "<script> window.location.href = `../index.php?page=$table`; </script>";
 

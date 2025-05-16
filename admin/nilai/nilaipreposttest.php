@@ -15,7 +15,7 @@
     function submitGrade($koneksi, $answers, $testtype, $student_id){
         // Get Answer Key
         $file = fopen("../../dist/file/$testtype.csv","r");
-        if (strlen($answers) == 20 && $file !== FALSE && isset($_SESSION[$testtype.'result'])){
+        if (strlen($answers) == 35 && $file !== FALSE && !isset($_SESSION[$testtype.'result'])){
             
             // Grading
             $index = 0; $grade = 0;
@@ -35,10 +35,11 @@
 
             $sql = "UPDATE tb_nilai SET summary = $finalGrade WHERE id_siswa = '$student_id'";
             $koneksi->query($sql);
+
+            // Put Answer to session for check mode
+            $_SESSION[$testtype.'result'] = $answers; // For checking answers
         }
         
-        // Put Answer to session for check mode
-        $_SESSION[$testtype.'result'] = $answers; // For checking answers
         
         // echo "<script> successProcedure() </script>";
         echo "<script> console.log('Data Saved'); window.location.href = `../../index.php?page=$testtype`; </script>";

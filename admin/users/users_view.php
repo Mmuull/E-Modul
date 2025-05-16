@@ -24,7 +24,8 @@
 		}
 		input{
 			border: 0;
-			max-width: 110px;
+			/* width: 100%; */
+			max-width: 100px;
 			/* appearance: none;
 			-webkit-appearance: none; */
 		}

@@ -1,8 +1,45 @@
 <?php
+	// Count Pengguna
+	$sql = $koneksi->query("SELECT count(id_pengguna) as agt from tb_pengguna");
+	while ($data= $sql->fetch_assoc()) {
+		$countpengguna=$data['agt'];
+	}
+	// Count Siswa 
 	$sql = $koneksi->query("SELECT count(id_siswa) as agt from tb_siswa");
 	while ($data= $sql->fetch_assoc()) {
+		$countsiswa=$data['agt'];
+	}
+	// Count Siswa Done pretest and posttest
+	$sql = $koneksi->query("SELECT count(id_siswa) as agt from tb_nilai where nilai_pretest != 0 and nilai_posttest != 0");
+	while ($data= $sql->fetch_assoc()) {
+		$countnilaisiswa=$data['agt'];
+	}
 	
-		$agt=$data['agt'];
+	// Get tb_nilai Data or Doughnut Chart
+	$sql = $koneksi->query("SELECT count(id_siswa) as agt from tb_nilai where nilai_pretest = 0 and nilai_posttest = 0");
+	while ($data= $sql->fetch_assoc()) {
+		$count_status_undone=$data['agt'];
+	}
+	$sql = $koneksi->query("SELECT count(id_siswa) as agt from tb_nilai where nilai_pretest != 0 and nilai_posttest = 0");
+	while ($data= $sql->fetch_assoc()) {
+		$count_status_halfdone=$data['agt'];
+	}
+	$sql = $koneksi->query("SELECT count(id_siswa) as agt from tb_nilai where nilai_pretest != 0 and nilai_posttest != 0");
+	while ($data= $sql->fetch_assoc()) {
+		$count_status_done=$data['agt'];
+	}
+
+	// Get tb_nilai Data or Doughnut Chart
+	$siswaname = [];
+	$siswagrade = [];
+	$sql = $koneksi->query(
+		"SELECT s.nama_siswa as nama, n.summary as grade
+		FROM tb_nilai n JOIN tb_siswa s
+		WHERE n.id_siswa = s.id_siswa"
+	);
+	while ($data= $sql->fetch_assoc()) {
+		array_push($siswaname, $data['nama']);
+		array_push($siswagrade, $data['grade']);
 	}
 ?>
 
@@ -23,15 +60,15 @@
 			<div class="small-box bg-blue">
 				<div class="inner">
 					<h4>
-						<?= "1";?>
+						Total Pengguna
 					</h4>
 
-					<p>Jadwal Kelas</p>
+					<p><?= "$countpengguna"?> Pengguna</p>
 				</div>
 				<div class="icon">
-					<i class="fa fa-calendar"></i>
+					<i class="fa fa-user"></i>
 				</div>
-				<a href="?page=#" class="small-box-footer">More info
+				<a href="?page=pengguna" class="small-box-footer">More info
 					<i class="fa fa-arrow-circle-right"></i>
 				</a>
 			</div>
@@ -42,15 +79,15 @@
 			<div class="small-box bg-yellow">
 				<div class="inner">
 					<h4>
-						<?= "2"; ?>
+						Total Siswa
 					</h4>
 
-					<p>Nilai</p>
+					<p><?= $countsiswa; ?> Siswa</p>
 				</div>
 				<div class="icon">
 					<i class="fa fa-graduation-cap"></i>
 				</div>
-				<a href="?page=#" class="small-box-footer">More info
+				<a href="?page=siswa" class="small-box-footer">More info
 					<i class="fa fa-arrow-circle-right"></i>
 				</a>
 			</div>
@@ -61,52 +98,85 @@
 			<div class="small-box bg-green">
 				<div class="inner">
 					<h4>
-						<?= "3"; ?>
+						Siswa Telah Selesai
 					</h4>
 
-					<p>Pretest Posttest</p>
+					<p><?= $countnilaisiswa ?> Siswa</p>
 				</div>
 				<div class="icon">
 					<i class="fa fa-pencil-square-o"></i>
 				</div>
-				<a href="?page=#" class="small-box-footer">More info
+				<a href="?page=nilai" class="small-box-footer">More info
 					<i class="fa fa-arrow-circle-right"></i>
 				</a>
 			</div>
 		</div>
 
-		<div class="col-lg-3 col-xs-6">
-			<!-- small box -->
-			<div class="small-box bg-red">
-				<div class="inner">
-					<h4>
-						<?= "4"; ?>
-					</h4>
-
-					<p>Uraian Materi</p>
-				</div>
-				<div class="icon">
-					<i class="fa fa-book"></i>
-				</div>
-				<a href="?page=materi" class="small-box-footer">More info
-					<i class="fa fa-arrow-circle-right"></i>
-				</a>
-			</div>
+		<div class="col-lg-8 col-xs-16 barchart">
+			<canvas id="nilaiChart"></canvas>
 		</div>
-		<!-- <div class="col-lg-6 col-xs-12">
-			Info box 
-			<div class="info-box">
-				<span class="info-box-icon bg-blue"><i class="fa fa-bookmark"></i></span>
-				<div class="info-box-content">
-					<span class="info-box-text">Bookmarks</span>
-					<span class="info-box-number">41,410</span>
-					<div class="progress">
-						<div class="progress-bar bg-blue" style="width: 70%"></div>
-					</div>
-					<span class="progress-description">
-						70% Increase in 30 Days
-					</span>
-				</div>
-			</div>
-		</div> -->
+
+		<div class="col-lg-4 col-xs-8 doughnutbar">
+			<canvas id="statusChart"></canvas>
+		</div>
+
+		<!-- Chart js -->
+		<script src="dist/js/chart/dist/chart.umd.js"></script>
+
+		<script>
+			const nilaichart = document.getElementById('nilaiChart');
+
+			new Chart(nilaichart, {
+				type: 'bar',
+				data: {
+				labels: <?php echo json_encode($siswaname);?>,
+				datasets: [{
+					label: 'Nilai Akhir Siswa',
+					// categoryPercentage : 100,
+					data: <?php echo json_encode($siswagrade);?>,
+					borderWidth: 1,
+					backgroundColor : '#0073b7',
+					borderColor : '#36A2EB'
+				}]
+				},
+				options: {
+				scales: {
+					y: {
+						beginAtZero: true,
+						// grid: {
+						// 	offset: true
+						// }
+					}
+				}
+				}
+			});
+
+			// Pretest Posttest Status Siswa
+			const statusChart = document.getElementById('statusChart');
+
+			new Chart(statusChart, {
+				type: 'doughnut',
+				data: {
+				labels: ['Belum Sama Sekali', 'Hanya Pretest', 'Sudah Pretest dan Posttest'],
+				datasets: [{
+					data: [<?=$count_status_undone?>, <?=$count_status_halfdone?>, <?=$count_status_done?>],
+					// borderWidth: 1,
+					backgroundColor : [
+						'#dd4b39',
+						'#f39c12',
+						'#00a65a'
+					],
+					borderColor : '#36A2EB',
+					hoverOffset: 4
+				}]
+				},
+				options: {
+				scales: {
+					y: {
+					beginAtZero: true
+					}
+				}
+				}
+			});
+		</script>
 		

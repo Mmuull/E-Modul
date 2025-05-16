@@ -339,6 +339,8 @@ include "inc/koneksi.php";
 		<script src="dist/js/demo.js"></script>
 		<!-- page script -->
 
+		<!-- Chart js -->
+		<!-- <script src="dist/js/chart/dist/chart.umd.js"></script> -->
 
 		<script>
 			$(function() {
