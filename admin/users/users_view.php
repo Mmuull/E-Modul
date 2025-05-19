@@ -24,8 +24,8 @@
 		}
 		input{
 			border: 0;
-			/* width: 100%; */
-			max-width: 100px;
+			/* Siswa Page little bit miss placed if width 100% */
+			<?php if($_GET['page'] == 'pengguna'){echo "width: 100%";} else { echo "max-width: 90px";}?>
 			/* appearance: none;
 			-webkit-appearance: none; */
 		}

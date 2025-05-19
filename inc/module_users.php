@@ -100,15 +100,17 @@
 
         $koneksi->query($sql);
 
-        // if ($table == 'siswa'){
-        //     $query = "SELECT id_siswa FROM tb_siswa ORDER BY id_siswa DESC LIMIT 1";
-        //     $id = $koneksi->query($query);
+        if ($table == 'siswa'){
+            $query = "SELECT id_siswa FROM tb_siswa ORDER BY id_siswa DESC LIMIT 1";
+            $result = $koneksi->query($query);
+            $id = $result->fetch_assoc();
+            $id = $id['id_siswa'];
 
-        //     $sql = "INSERT INTO tb_nilai VALUE (NULL, $id, NULL, 0, NULL, 0, 0)";
+            $sql = "INSERT INTO tb_nilai VALUE (NULL, $id, NULL, 0, NULL, 0, 0)";
             
-        //     // echo $sql;
-        //     $koneksi->query($sql);
-        // }
+            // echo $sql;
+            $koneksi->query($sql);
+        }
 
         echo "<script> window.location.href = `../index.php?page=$table`; </script>";
 

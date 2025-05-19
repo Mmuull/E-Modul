@@ -32,6 +32,12 @@
 	// Get tb_nilai Data or Doughnut Chart
 	$siswaname = [];
 	$siswagrade = [];
+	$siswacolor = [];
+	$colorlib = [
+		'A' => "#00a65a",
+		'B' => "#f39c12",
+		'C' => "#dd4b39"
+	];
 	$sql = $koneksi->query(
 		"SELECT s.nama_siswa as nama, n.summary as grade
 		FROM tb_nilai n JOIN tb_siswa s
@@ -40,6 +46,10 @@
 	while ($data= $sql->fetch_assoc()) {
 		array_push($siswaname, $data['nama']);
 		array_push($siswagrade, $data['grade']);
+		if ($data['grade'] >= 50){$colorkey = 'A';}
+		else if ($data['grade'] >= 25){$colorkey = 'B';}
+		else {$colorkey = 'C';}
+		array_push($siswacolor, $colorlib[$colorkey]);
 	}
 ?>
 
@@ -132,10 +142,9 @@
 				labels: <?php echo json_encode($siswaname);?>,
 				datasets: [{
 					label: 'Nilai Akhir Siswa',
-					// categoryPercentage : 100,
 					data: <?php echo json_encode($siswagrade);?>,
 					borderWidth: 1,
-					backgroundColor : '#0073b7',
+					backgroundColor : <?php echo json_encode($siswacolor);?>,
 					borderColor : '#36A2EB'
 				}]
 				},
@@ -143,9 +152,6 @@
 				scales: {
 					y: {
 						beginAtZero: true,
-						// grid: {
-						// 	offset: true
-						// }
 					}
 				}
 				}
