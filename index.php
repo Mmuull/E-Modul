@@ -64,6 +64,20 @@ include "inc/koneksi.php";
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
+				<div class="navbar-custom-menu">
+					<ul class="nav navbar-nav">
+						<!-- Messages: style can be found in dropdown.less-->
+						<li class="dropdown messages-menu">
+							<a class="dropdown-toggle">
+								<span>
+									<b>
+										E-Modul Perangkat Keras V 1.0
+									</b>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</nav>
 		</header>
 
@@ -138,7 +152,7 @@ include "inc/koneksi.php";
 							<?php
 						case "Student": ?>
 							<li class="header">MAIN NAVIGATION</li>
-							<li class="treeview">
+							<!-- <li class="treeview">
 								<a href="#">
 									<i class="fa fa-bookmark"></i>
 									<span>Pendahuluan</span>
@@ -146,29 +160,29 @@ include "inc/koneksi.php";
 										<i class="fa fa-angle-left pull-right"></i>
 									</span>
 								</a>
-								<ul class="treeview-menu">
-									<li class="treeview">
-										<a href="?page=cp">
-											<i class="fa fa-flag"></i>
-											<span>Capaian Pembelajaran</span>
-										</a>
-									</li>	
-									<li class="treeview">
-										<a href="?page=tp">
-											<i class="fa fa-bullseye"></i>
-											<span>Tujuan Pembelajaran</span>
-										</a>
-									</li>
+							</li> -->
+							<li class="treeview">
+								<li class="treeview">
+									<a href="?page=cp">
+										<i class="fa fa-flag"></i>
+										<span>Capaian Pembelajaran</span>
+									</a>
+								</li>	
+								<li class="treeview">
+									<a href="?page=tp">
+										<i class="fa fa-bullseye"></i>
+										<span>Tujuan Pembelajaran</span>
+									</a>
+								</li>
 
-									<li class="treeview">
-										<a href="?page=langkahpbl">
-											<i class="fa fa-road"></i>
-											<!-- <i class="fa fa-shoe-prints"></i> -->
-											<span>Langkah Langkah PBL</span>
-										</a>
-									</li>
-									
-								</ul>
+								<li class="treeview">
+									<a href="?page=langkahpbl">
+										<i class="fa fa-road"></i>
+										<!-- <i class="fa fa-shoe-prints"></i> -->
+										<span>Langkah Langkah PBL</span>
+									</a>
+								</li>
+								
 							</li>
 
 							<li class="treeview">

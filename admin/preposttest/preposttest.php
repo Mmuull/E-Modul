@@ -51,6 +51,7 @@
 			white-space: inherit;
 		}
 		div.btn-answer{
+			font-size: 20px;
 			display: inline-flex;
 		}
 		span.btn-answer{
@@ -107,7 +108,14 @@
 	<div class="content">
 		<?php while (($line = fgetcsv($file)) !== false) { ?>
 		<div class="box box-primary container">
-			<span class="question"> <?= $line[0].". ".$line[1]?></span>
+			<div style="display: flex; width: 100%;">
+				<div style="flex: 0.01;">
+					<span class="question"> <?= $line[0].". "?></span>
+				</div>
+				<div style="flex: 1; padding-left: 10px;">
+					<span class="question"> <?= $line[1]?></span>
+				</div>
+			</div>
 			<?php $line[0] = $line[0] == 10 ? "X" : $line[0] // Change 10 to X.?> 
 			<div class="box-header with-border">
 				<?php 

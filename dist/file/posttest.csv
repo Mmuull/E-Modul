@@ -1,29 +1,87 @@
-1,"Seorang guru informatika menjelaskan bahwa perangkat keras komputer terbagi menjadi beberapa jenis berdasarkan fungsinya, seperti input, proses, dan output. <br><br>Dari pernyataan di atas Manakah contoh perangkat yang berfungsi sebagai perangkat input?",Printer,Mouse,Speaker,Monitor,B,100
-2,"Seorang siswa mengalami kesulitan ketika mengetik di komputer karena beberapa tombol tidak berfungsi dengan baik.<br><br>Dari pernyataan di atas ,  Perangkat keras apa yang harus di ganti?",Monitor,Keyboard,Hard Disk,RAM,B,100
-3,"Siti adalah seorang siswi kelas 7 yang baru belajar tentang komputer. Suatu hari, dia ingin membuat tugas sekolah menggunakan Microsoft Word di komputer milik ayahnya. Saat komputer dinyalakan, Siti melihat logo Windows muncul di layar, lalu setelah beberapa detik, tampilan desktop muncul. Dia kemudian menggunakan keyboard untuk mengetik teks dan mouse untuk mengatur format tulisan.<br><br>Berdasarkan pernyataan di atas, perangkat keras utama yang digunakan Siti dalam bekerja dengan komputer adalah...","Monitor, CPU, Mouse, Keyboard","RAM, Printer, Speaker, Flashdisk","Hard disk, Scanner, Sound Card, Projector","VGA Card, Power Supply, Joystick",A,100
-4,"Fadil ingin membeli perangkat tambahan untuk komputer gaming miliknya. Ia ingin meningkatkan kualitas tampilan dan suara saat bermain game. Selain itu, ia juga membutuhkan perangkat untuk mengontrol permainan dengan lebih nyaman.<br><br>Dari pernyataan di atas, manakah kelompok perangkat yang paling sesuai dengan kebutuhannya?","(<b>Input</b>): Joystick | (<b>Pemrosesan</b>): CPU | (<b>Penyimpanan</b>): Hard disk | (<b>Output</b>): Monitor, Speaker","(<b>Input</b>): Mouse, Scanner | (<b>Pemrosesan</b>): RAM | (<b>Penyimpanan</b>): Flashdisk | (<b>Output</b>): Keyboard, CPU","(<b>Input</b>): Hard disk, SSD | (<b>Pemrosesan</b>): Joystick | (<b>Penyimpanan</b>): Keyboard | (<b>Output</b>): Scanner, Printer","(<b>Input</b>): Printer | (<b>Pemrosesan</b>): Monitor | (<b>Penyimpanan</b>): CPU | (<b>Output</b>): Mouse, Keyboard",A,100
-5,"Budi ingin mendengarkan lagu dari komputernya. Ia membuka aplikasi pemutar musik dan menekan tombol ""Play"". Beberapa saat kemudian, ia dapat mendengar suara lagu tersebut.<br><br>Dari pernyataan di atas,  Perangkat keras yang memungkinkan Budi mendengar suara dari komputer adalah...",Monitor ,"Scanner, karena dapat mengubah dokumen fisik menjadi file digital","Speaker, karena dapat menampilkan suara dari komputer","Keyboard, karena dapat memasukkan data secara manual ke dalam komputer",C,100
-6,"Bu Rini adalah seorang guru informatika yang ingin mengonversi dokumen fisik menjadi file digital agar bisa dikirim melalui email kepada murid-muridnya. Ia memerlukan perangkat keras yang dapat membaca teks dari dokumen cetak dan mengubahnya menjadi file di komputer.<br><br>Dari pernyataan di atas , Perangkat keras apa yang paling sesuai dengan kebutuhan Bu Rini?","Hard disk, karena menyimpan sistem operasi dan file proyek","VGA Card, karena berfungsi untuk memproses tampilan grafis dengan lebih cepat","Mouse, karena berfungsi untuk mengontrol pergerakan kursor dalam desain grafis","Printer, karena dapat mencetak hasil desain dalam bentuk fisik",B,100
-7,"Beni adalah seorang desainer grafis yang menggunakan komputer untuk mengedit gambar beresolusi tinggi. Saat bekerja, ia sering mengalami keterlambatan dalam proses rendering gambar. Setelah berkonsultasi dengan teknisi, ia diberi saran untuk meningkatkan salah satu komponen komputernya.<br><br>Dari pernyataan di atas , Komponen perangkat keras mana yang harus ditingkatkan oleh Rudi untuk mempercepat rendering gambar?","Hard disk, karena menyimpan sistem operasi dan file proyek","VGA Card, karena berfungsi untuk memproses tampilan grafis dengan lebih cepat","Mouse, karena berfungsi untuk mengontrol pergerakan kursor dalam desain grafis","Printer, karena dapat mencetak hasil desain dalam bentuk fisik",B,100
-8,"Doni ingin menyimpan banyak file tugas dan video pembelajaran di dalam komputernya. Namun, setelah beberapa waktu, ia mendapatkan peringatan bahwa kapasitas penyimpanan hampir penuh.<br><br>Dari pernyataan di atas , Perangkat keras apa yang berkaitan langsung dengan penyimpanan data dalam komputer?",RAM,Hard Disk atau SSD,VGA Card,Speaker,B,100
-9,"Pak Agus ingin mempresentasikan materi pelajaran di kelas menggunakan komputer. Ia ingin agar suara dari presentasi tersebut bisa terdengar dengan jelas oleh semua siswa di dalam ruangan.<br><br>Dari pernyataan di atas , Perangkat keras apa yang bisa digunakan Pak Agus untuk memperbesar suara dari komputer?",Speaker,Monitor,Scanner,Keyboard,A,100
-10,Sebuah perusahaan ingin meningkatkan kecepatan sistem komputernya tanpa harus mengganti seluruh perangkat keras. Teknisi menyarankan untuk mengganti salah satu komponen agar proses booting lebih cepat dan loading program lebih responsif.<br><br>Dari pernyataan di atas Komponen perangkat keras apa yang sebaiknya ditingkatkan untuk mempercepat booting dan akses program?,HDD ke SSD,Keyboard ke Joy Stick,Monitor ke Resolusi lebih besar,Speaker ke kualitas lebih tinggi,A,100
-11,"Rina sedang mengetik sebuah dokumen di komputernya menggunakan keyboard. Saat ia menekan tombol pada keyboard, teks muncul di layar monitor. <br><br>Dari pernyataan di atas , bagaimana urutan alur kerja perangkat keras yang terjadi dalam proses ini adalah...",Keyboard &#8594 CPU &#8594 RAM &#8594 Monitor,Monitor &#8594 CPU &#8594 Keyboard &#8594 RAM,RAM &#8594 Keyboard &#8594 CPU &#8594 Monitor,Keyboard &#8594 Monitor &#8594 CPU &#8594 RAM,A,100
-12,"Saat menggunakan komputer, Fajar merasa bahwa komputer ternya berjalan sangat lambat, terutama saat membuka banyak aplikasi secara bersamaan.<br><br>Dari pernyataan di atas ,  Apa langkah pertama yang bisa dilakukan untuk mengatasi masalah ini?",Menutup aplikasi yang tidak diperlukan dan membersihkan file sementara,Mengganti CPU dengan model terbaru,Menghapus seluruh data di hard disk,Mengganti kartu grafis dengan yang lebih mahal,A,100
-13,"Budi ingin mencetak dokumen untuk presentasi besok. Namun, saat ia mencoba mencetak, tidak ada reaksi dari printer. Lampu indikator menyala, tetapi tidak ada aktivitas pencetakan.<br><br>
-Berikut adalah beberapa langkah yang dapat dilakukan:<br>
-1.Memeriksa apakah kabel USB printer sudah terhubung dengan benar ke komputer.<br>
-2.Memeriksa status printer di komputer untuk melihat apakah ada peringatan error.<br>
-3.Memastikan bahwa ada cukup kertas di baki printer.<br>
-4.Mengecek level tinta atau toner printer.<br>
-5.Menjalankan perintah ""Print Test Page"" untuk melihat apakah printer bisa mencetak tanpa dokumen dari komputer.<br><br>
-Dari langkah-langkah di atas, urutan yang paling sistematis untuk menyelesaikan pernyataan di atas adalah...",3 &#8594 1 &#8594 2 &#8594 4 &#8594 5 ,1 &#8594 3 &#8594 2 &#8594 4 &#8594 5 ,4 &#8594 6 &#8594 2 &#8594 5 &#8594 1 ,5 &#8594 1 &#8594 3 &#8594 4 &#8594 2 ,B,100
-14,"Erlan  memiliki laptop dengan beberapa tombol yang tidak berfungsi. Ia memperhatikan bahwa dua teman sekampusnya mengalami masalah yang sama. Setelah diperiksa, ternyata semua laptop yang mengalami masalah ini pernah terkena tumpahan air di keyboard.<br><br>Dari pernyataan di atas , apa solusi yang seharusnya dilakukan segera setelah keyboard terkena air adalah...",Menggunakan hair dryer untuk mengeringkan keyboard,Langsung melepas baterai dan mematikan laptop sebelum mengeringkannya,Membiarkannya saja karena kemungkinan akan normal kembali,Menggunakan keyboard eksternal tanpa memperbaiki yang rusak,B,100
-15,"Eka ingin mengakses file dari flash disk, tetapi perangkat tidak muncul di File Explorer.<br><br>
-Berikut adalah beberapa langkah yang dapat dilakukan:<br>
-1.Mencoba menghubungkan flash disk ke port USB lain.<br>
-2.Menggunakan flash disk lain untuk memastikan masalah bukan pada komputer.<br>
-3.Mengecek Device Manager apakah flash disk terdeteksi tetapi tidak dikenali.<br>
-4.Jika masih tidak muncul, mencoba memformat flash disk menggunakan Disk Management.<br>
-5.Jika tetap bermasalah, mempertimbangkan untuk mengganti flash disk dengan yang baru.<br><br>
-Dari langkah-langkah di atas, urutan yang paling sistematis untuk menyelesaikan pernyataan di atas adalah...",2 &#8594 3 &#8594 1 &#8594 4 &#8594 5,1 &#8594 2 &#8594 3 &#8594 4 &#8594 5,3 &#8594 1 &#8594 4 &#8594 2 &#8594 5,4 &#8594 3 &#8594 2 &#8594 1 &#8594 5,B,100
+1,"Sekolah mengadakan kegiatan praktik komputer untuk siswa kelas 8. Setiap kelompok mendapatkan laporan masalah yang berbeda. Berikut salah satu laporan kelompok:
+Laporan Kelompok 3<br><ul>
+<li>Komputer menyala dan monitor menunjukkan tampilan desktop</li>
+<li>Keyboard berfungsi, tetapi mouse tidak bisa digerakkan</li>
+<li>Speaker tersambung, tapi tidak terdengar suara</li>
+<li>Internet berjalan normal</li>
+<li>Sistem operasi dan aplikasi sudah berjalan lancar</li></ul>
+<b>Tugas kelompok:</b><br>
+""Apakah masalah di atas bisa disebabkan oleh perangkat keras? Jika ya, <b>komponen mana yang paling mungkin jadi penyebab utama</b>, berdasarkan definisi perangkat keras komputer?""<br>
+Apa jawaban terbaik untuk menyelesaikan tugas kelompok tersebut?",Tidak ada masalah perangkat keras karena semua sistem berjalan normal,"Masalah terletak pada sistem operasi, bukan perangkat keras",Kemungkinan besar perangkat keras mouse atau speaker mengalami gangguan,Masalah hanya terjadi karena tidak ada koneksi internet,C,100
+2,"Jika <b>keyboard pada komputer berfungsi memasukkan data</b>, alat apa yang setara fungsinya pada sebuah toko?",Mesin kasir,Lampu toko,Lemari kaca,Rak makanan,A,100
+3,"Jika <b>flashdisk diibaratkan seperti tas kecil</b> yang bisa digunakan bolak-balik untuk <b>menyimpan dan memindahkan data</b>, maka <b>CD</b> lebih tepat diibaratkan seperti...",Buku catatan yang bisa dihapus kapan saja,Poster di dinding yang hanya bisa dibaca dan tidak bisa diubah isinya,Laci lemari yang otomatis bisa mengganti isinya,Papan tulis yang bisa terus ditulis dan dihapus,B,100
+4,"Bayu dan Wina sedang berdiskusi tentang fungsi ROM pada komputer.<ul>
+<li>Bayu mengatakan bahwa <b>ROM seperti papan tulis yang bisa ditulis ulang setiap hari.</b></li>
+<li>Wina berpendapat bahwa <b>ROM lebih mirip buku panduan tetap yang dibaca setiap kali komputer dinyalakan, tetapi isinya tidak berubah.</b></li></ul>
+Siapakah yang memberikan penjelasan yang lebih tepat, dan apa alasannya?","Bayu, karena ROM bisa menyimpan banyak data yang bisa dihapus","Wina, karena ROM menyimpan instruksi tetap yang tidak berubah dan dibaca saat komputer menyala","Bayu, karena ROM digunakan untuk menyimpan dokumen Word","Wina, karena ROM berfungsi sebagai tempat menyimpan semua file pengguna",B,100
+5,"Di ruang tamu kelas, terdapat sebuah <b>poster berisi tata tertib </b>yang<b> selalu dibaca oleh siswa setiap kali masuk</b>, namun <b>isinya tidak pernah diubah</b>.
+<br><br>
+Setiap siswa dapat memahami aturan tanpa perlu bertanya, karena informasi tersebut <b>selalu tersedia dan bersifat tetap</b>.
+<br><br>
+Jika analogi ini diterapkan pada sistem komputer, <b>komponen manakah yang paling sesuai dengan fungsi poster tersebut?</b>","RAM, karena hanya dibaca saat digunakan","ROM, karena isinya tetap dan dibaca setiap kali sistem dijalankan","CPU, karena mengatur semua kegiatan","Flashdisk, karena bisa dibawa ke mana-mana",B,100
+6,"Aldi menggunakan komputer rakitannya untuk <b>mendesain grafis</b>. Saat membuka <b>file berukuran besar</b>, komputer terasa <b>lambat dan kurang responsif</b>. Ia mencoba mengevaluasi 4 komponen utama:<ul>
+<li><b>RAM</b>: 2 GB</li>
+<li><b>Hard disk</b>: 500 TB</li>
+<li><b>VGA Card</b>: 2 GB</li>
+<li><b>Power Supply</b>: 150W</li></ul>
+Karena keterbatasan anggaran, Aldi hanya bisa mengganti <b>satu komponen saja.</b>
+Jika tujuan utamanya adalah untuk <b>meningkatkan kinerja komputer saat membuka file besar pada aplikasi desain grafis</b>, komponen mana yang <b>sebaiknya diganti terlebih dahulu</b>?",Hard disk,RAM,VGA Card,Power Supply,B,100
+7,"Aldi menggunakan komputernya untuk <b>mengedit video beresolusi tinggi</b>. Namun, setiap kali ia melakukan proses <b>rendering</b>, komputernya menjadi sangat lambat dan bahkan <b>sering mengalami hang</b>. Ia pun mulai mengevaluasi beberapa komponen komputer untuk mengetahui penyebabnya.<br><br>
+<b>Dari kasus tersebut, komponen manakah yang paling tepat untuk ditingkatkan agar proses rendering menjadi lebih cepat dan stabil?</b>",VGA Card,Speaker,Monitor,Mouse,A,100
+8,"Doni memiliki komputer dengan spesifikasi:<ul>
+<li>RAM: 4GB</li>
+<li>CPU: Intel Core i5</li>
+<li>SSD: 256 GB</li>
+<li>GPU: Nvidia</li></ul>
+Suatu hari muncul pesan <b>""storage full""</b>, padahal aplikasi berjalan lancar. <b>Berdasarkan informasi tersebut, komponen manakah yang paling mungkin menjadi penyebab munculnya pesan tersebut?</b>",Hard Disk,SSD,RAM,ROM,B,100
+9,"Pak Agus membawa <b>perangkat keras komputer</b> ke kelas untuk presentasi. Di atas meja terdapat beberapa perangkat:<ol>
+<li>Kabel HDMI</li>
+<li>Mouse</li>
+<li>Proyektor</li>
+<li>Speaker</li>
+<li>Kabel LAN</li></ol>
+Pak Agus <b>menyampaikan bahwa ia ingin menampilkan video dari komputer ke layar</b> dan memastikan <b>suara dari video terdengar jelas oleh seluruh siswa.</b><br>
+Berdasarkan tujuan tersebut, perangkat manakah yang paling tepat digunakan?","1, 2, dan 3","2, 4, dan 5",3 dan 4,Semua perangkat di atas,C,100
+10,"Sebuah perusahaan mengeluhkan <b>komputer lambat saat dinyalakan</b> dan ketika <b>membuka program aplikasi</b>. Seorang teknisi kemudian mencatat beberapa kemungkinan penyebab berikut:<ol>
+<li>Ruang hard disk hampir penuh</li>
+<li>Terlalu banyak program berjalan saat startup</li>
+<li>Komputer masih menggunakan HDD, bukan SSD</li>
+<li>Kapasitas RAM hanya 2 GB</li></ol>
+Berdasarkan informasi di atas, langkah-langkah mana yang menunjukkan proses analisis masalah terhadap kelambatan komputer tersebut?",1 dan 2 saja,3 dan 4 saja,"1, 2, 3, dan 4",Hanya 3,C,100
+11,"Rafli menekan <b>tombol power</b> pada komputernya, tetapi <b>komputer tidak menyala</b> sama sekali. Ia <b>tidak tahu pasti apa penyebabnya</b>, dan ingin melakukan langkah-langkah pemeriksaan yang <b>tepat dan efisien</b> sebelum meminta bantuan teknisi.
+Manakah urutan langkah pemecahan masalah yang paling tepat dan efisien berikut ini?","<ul><li><b>Jika lampu indikator CPU menyala</b> &#8594 periksa RAM</li>
+<li>Jika <b>tidak menyala</b> &#8594 periksa kabel daya</li>
+<li>Jika<b>kabel daya terhubung baik</b> &#8594 periksa aliran listrik dari stopkontak</li></ul>","<ul><li>Periksa <b>layar monitor</b></li>
+<li>Jika masih tidak menyala &#8594 <b>instal ulang sistem</b></li></ul>","<ul><li>Langsung ganti <b>kabel power</b></li>
+<li>Jika tidak berhasil &#8594 langsung ganti <b>motherboard</b></li>
+<li>Jika masih gagal &#8594 beli unit <b>CPU baru</b></li></ul>","<ul><li>Hubungi <b>teknisi</b></li>
+<li>Jika teknisi belum datang &#8594 <b>tunggu 1-2 hari</b></li>
+<li>Jika teknisi tidak bisa &#8594 <b>bawa ke tempat servis</b></li></ul>",A,100
+12,"Dalam seminggu terakhir, <b>guru TIK menerima laporan dari beberapa siswa</b>:
+<ul>
+<li>Hari Senin: 2 siswa flash disk-nya tidak terbaca di <b>komputer 4 dan 5</b>, tapi normal di rumah</li>
+<li>Hari Rabu: 3 siswa melaporkan hal sama di <b>komputer 5 dan 6</b></li>
+<li>Hari Jumat: 2 siswa flash disk-nya hanya tidak terbaca di <b>komputer 5</b></li></ul>
+<b>Berdasarkan dari laporan tersebut</b>, langkah terbaik yang bisa dilakukan adalah...",Meminta semua siswa memformat flash disk,Menginstal ulang semua sistem operasi,Mengecek dan memperbaiki port USB pada komputer 5,Mengganti semua flash disk siswa dengan yang baru,C,100
+13,"Dalam seminggu, beberapa siswa melaporkan bahwa <b>keyboard di laboratorium tidak merespons sebagian tombol huruf</b> saat digunakan untuk mengetik.<br><br>
+ Masalah yang sering dilaporkan adalah <b>huruf-huruf tertentu seperti ""A"", ""S"", ""D"", dan ""F"" tidak muncul di layar meskipun telah ditekan berulang kali.</b><br><br>
+Setelah dicatat oleh guru TIK, diketahui bahwa <b>semua kejadian tersebut hanya terjadi di komputer nomor 4 dan 5</b>, sedangkan komputer lain tidak menunjukkan gejala serupa. Kondisi ini mengganggu kelancaran kegiatan mengetik siswa saat pelajaran berlangsung.<br><br>
+
+Berdasarkan pola kejadian tersebut, tindakan perbaikan mana yang paling tepat dilakukan terlebih dahulu?",Membersihkan permukaan keyboard komputer 4 dan 5 untuk menghilangkan debu atau kotoran,Menguji keyboard komputer 4 dan 5 dengan memasangnya ke komputer lain,Mengganti keyboard komputer 4 dan 5 jika terbukti mengalami kerusakan fisik,Memeriksa konektor keyboard dan memastikan kabel tidak kendur atau longgar,C,100
+14,"Lani diminta untuk mencetak <b>dokumen penting</b> menggunakan <b>komputer sekolah</b>. Namun, ia masih <b>bingung dengan urutan langkah-langkah yang benar</b> agar dokumen tersebut bisa tercetak dengan baik.<br>
+Manakah urutan langkah yang tepat yang harus dilakukan Lani, mulai dari membuka dokumen hingga mencetaknya?",Tekan tombol Print &#8594 Buka dokumen &#8594 Pilih printer &#8594 Cetak,Buka dokumen &#8594 Pilih Print &#8594 Pilih printer &#8594 Cetak,Pilih printer &#8594 Cetak &#8594 Buka file dokumen,Nyalakan speaker &#8594 Tekan tombol Print,B,100
+15,"Dalam komputer, <b>hard disk berfungsi untuk menyimpan data secara jangka panjang</b>, seperti dokumen, gambar, dan program.
+Jika kamu diminta mencari <b>benda dalam kehidupan sehari-hari</b> yang memiliki <b>fungsi serupa</b>, perangkat manakah yang paling setara dengan <b>fungsi hard disk</b> tersebut?",Tas sekolah,Lemari arsip,Kipas angin,Lampu belajar,B,100
+16,"Doni sedang membandingkan dua alat penyimpanan data:<br><ul>
+<li>Yang satu <b>terpasang di dalam laptop</b> dan digunakan untuk menyimpan <b>program penting seperti sistem operasi</b></li>
+<li>Yang lainnya <b>berukuran kecil dan mudah dibawa-bawa</b>, biasanya digunakan untuk <b>memindahkan file ke komputer lain</b></li></ul>
+Bayu kemudian memberikan analogi:
+""Yang pertama seperti <b>lemari besar di rumah</b>, dan yang kedua seperti <b>tas kecil yang bisa dibawa ke luar rumah</b>.""
+Berdasarkan analogi tersebut, alat yang dimaksud Bayu sebagai ""tas kecil"" adalah...",RAM,SSD,CD,Flashdisk,D,
+17,"Di sebuah <b>museum</b>, terdapat <b>papan informasi tetap</b> yang menjelaskan <b>sejarah benda koleksi</b>. Tulisan di papan tersebut <b>tidak pernah diubah</b>, agar semua pengunjung mendapatkan <b>informasi yang sama setiap waktu</b>.<br><br>
+Jika diibaratkan dalam sistem komputer, <b>perangkat manakah yang berfungsi menyimpan data tetap seperti papan informasi tersebut?</b>",SSD,RAM,ROM,Cache,C,
+18,"Dalam kehidupan sehari-hari, <b>koper digunakan untuk membawa pakaian</b> dari satu tempat ke tempat lain.<br><br>
+Di dunia komputer, terdapat <b>perangkat kecil</b> yang digunakan untuk <b>membawa dan memindahkan data antar komputer</b>, seperti fungsi koper dalam kehidupan nyata.<br><br>
+Perangkat apakah yang memiliki fungsi serupa denga koper tersebut?",RAM,Flashdisk,Power Supply,CPU,B,
+19,"Saat memutar video di komputer, <b>tampilan visual muncul dengan normal</b>, tetapi <b>tidak ada suara yang terdengar</b>.<br><br>
+Untuk mengatasi masalah tersebut, <b>langkah-langkah pemeriksaan apa yang paling tepat dilakukan secara berurutan?</b>",Periksa speaker &#8594 buka casing CPU &#8594 ganti kabel VGA,Periksa volume &#8594 cek speaker &#8594 coba headset,Coba mouse &#8594 restart komputer &#8594 ganti monitor,Buka file video&#8594 cetak dokumen,B,
