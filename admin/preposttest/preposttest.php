@@ -75,7 +75,7 @@
 				<?= ucfirst($_GET['page'])?>
 			</span>
 			<br><br>
-			<span class="header">
+			<!-- <span class="header">
 				Lorem Ipsum is a widely used placeholder text in design and publishing, originating from a work by Cicero, and is often generated for use in layouts and mockups.
 			</span>
 			<hr>
@@ -83,7 +83,7 @@
 				Lorem Ipsum is a widely used placeholder text in design and publishing, originating from a work by Cicero, and is often generated for use in layouts and mockups.
 			</span>
 			<hr>
-			<span class="rednote" style="color: red;">* Lorem Ipsum is a widely used placeholder text in design and publishing</span>
+			<span class="rednote" style="color: red;">* Lorem Ipsum is a widely used placeholder text in design and publishing</span> -->
 		</div>	
 	</div>
 	<!-- Main content -->

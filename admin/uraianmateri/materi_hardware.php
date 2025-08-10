@@ -17,20 +17,6 @@
 		}
 	</style>
 	<div class="box box-primary" style="padding: 2% 5% 2%;">
-		<div class="content-header">
-			<a href="?page=materi" class="btn btn-lg btn-primary" title="Uraian Materi Menu"><i class="fa fa-arrow-left"></i></a>
-		</div>
-		<h3 style="font-size: 32px; text-align:center;">
-			Perangkat Keras Komputer
-		</h3>
-		<br>
-		<!-- /.box-header -->
-		<p style="font-size: 18px; text-align: justify">
-			Perangkat keras komputer adalah perangkat pada komputer yang memiliki bentuk fisik secara nyata dan
-			dapat diraba dan dilihat. Perangkat keras dibagi berdasarkan fungsinya yaitu sebagai perangkat masukan
-			(<i>input</i>), pemroses (<i>processor</i>), keluaran (<i>output</i>), memori dan penyimpan (<i>storage</i>).
-		</p>
-
 		<?php 
 		$section = $_GET['hardware'];
 		$section_materi = ['input',  'process', 'output', 'storage'];
@@ -43,7 +29,23 @@
 			"storage" => "red"
 		];
 		
-		$file = fopen("dist/file/materihardware.csv","r"); ?>
+		$file = fopen("dist/file/materihardware.csv","r"); 
+		while($line = fgetcsv($file)){
+			if ($line[0] == "Perangkat ".ucfirst($section)){ $page_desc = $line[1]; break;}
+		};
+		?>
+		<div class="content-header">
+			<a href="?page=materi" class="btn btn-lg btn-primary" title="Uraian Materi Menu"><i class="fa fa-arrow-left"></i></a>
+		</div>
+		<h3 style="font-size: 32px; text-align:center;">
+			Perangkat Keras Komputer
+		</h3>
+		<br>
+		<!-- /.box-header -->
+		<p style="font-size: 18px; text-align: justify">
+			<?= $page_desc ?>
+		</p>
+		
 		<section id="<?php echo $section?>"><br>
 		<h4 style="font-weight: bold; font-size: 18px;">Perangkat <?php echo ucfirst($section) ?></h4>
 		<div class="box-body">

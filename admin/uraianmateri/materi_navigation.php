@@ -53,9 +53,11 @@
 			<h1>
 				Uraian Materi
 			</h1>
-			<p>
-				Lorem Ipsum is a widely used placeholder text in design and publishing, originating from a work by Cicero, and is often generated for use in layouts and mockups.
-			</p>
+			<!-- <p>
+				Perangkat keras komputer adalah perangkat pada komputer yang memiliki bentuk fisik secara nyata dan
+			dapat diraba dan dilihat. Perangkat keras dibagi berdasarkan fungsinya yaitu sebagai perangkat masukan
+			(<i>input</i>), pemroses (<i>processor</i>), keluaran (<i>output</i>), memori dan penyimpan (<i>storage</i>).
+			</p> -->
 		</div>
 	</div>
 </section>

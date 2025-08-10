@@ -217,7 +217,7 @@ include "inc/koneksi.php";
 							
 
 							<li class="header">SETTINGS</li>
-							<li class="treeview">
+							<!-- <li class="treeview">
 								<a href="#">
 									<i class="fa fa-question"></i>
 									<span>Bantuan</span>
@@ -233,7 +233,7 @@ include "inc/koneksi.php";
 										</a>	
 									</li>
 								</ul>	
-							</li>
+							</li> -->
 							<?php }?>
 					<li>
 						<a href="logout.php" onclick="return confirm('Anda yakin keluar dari aplikasi ?')">

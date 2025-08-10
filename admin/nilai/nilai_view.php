@@ -56,7 +56,7 @@
 								}
 						?>
 							<td>
-								<button class="btn btn-danger" title="Cek Pretest" onclick="deleteData(<?= $data['id_siswa']?>)">
+								<button class="btn btn-danger" title="Hapus Nilai" onclick="deleteData(<?= $data['id_siswa']?>)">
 									<i class="glyphicon glyphicon-remove-sign"></i></button>
 
 								<!-- <a href="index.php?page=pretest&mode=check&order=<?= "" //$no ?>" title="Cek Pretest" class="btn btn-warning">
